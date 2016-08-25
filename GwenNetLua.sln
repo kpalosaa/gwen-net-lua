@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GwenNetLua", "GwenNetLua\GwenNetLua.csproj", "{B11D8781-C235-4F73-BE6D-6FAB14F72B36}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{AC41BAD1-0963-4C65-9A29-EA1EC408F361}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{875D8F46-3813-4F86-B389-D6E04AD24BEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GwenNetLua", "Library\Portable\GwenNetLua.csproj", "{B11D8781-C235-4F73-BE6D-6FAB14F72B36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Desktop.OpenTK", "Sample\Sample.Desktop.OpenTK\Sample.Desktop.OpenTK.csproj", "{CFAEFF76-9BF5-4C5B-AB90-7CE5C62D9DE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample\Sample.csproj", "{670EB0FD-C172-4DCB-84DF-AFA9DA7A168E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +23,21 @@ Global
 		{B11D8781-C235-4F73-BE6D-6FAB14F72B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B11D8781-C235-4F73-BE6D-6FAB14F72B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B11D8781-C235-4F73-BE6D-6FAB14F72B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFAEFF76-9BF5-4C5B-AB90-7CE5C62D9DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFAEFF76-9BF5-4C5B-AB90-7CE5C62D9DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFAEFF76-9BF5-4C5B-AB90-7CE5C62D9DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFAEFF76-9BF5-4C5B-AB90-7CE5C62D9DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670EB0FD-C172-4DCB-84DF-AFA9DA7A168E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670EB0FD-C172-4DCB-84DF-AFA9DA7A168E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670EB0FD-C172-4DCB-84DF-AFA9DA7A168E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670EB0FD-C172-4DCB-84DF-AFA9DA7A168E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B11D8781-C235-4F73-BE6D-6FAB14F72B36} = {AC41BAD1-0963-4C65-9A29-EA1EC408F361}
+		{CFAEFF76-9BF5-4C5B-AB90-7CE5C62D9DE5} = {875D8F46-3813-4F86-B389-D6E04AD24BEC}
+		{670EB0FD-C172-4DCB-84DF-AFA9DA7A168E} = {875D8F46-3813-4F86-B389-D6E04AD24BEC}
 	EndGlobalSection
 EndGlobal
