@@ -80,6 +80,9 @@ namespace GwenNetLua
 			UserData.RegisterProxyType<GwenNetLua.Control.Button, Gwen.Control.Button>(r => new GwenNetLua.Control.Button(r));
 			gwen["Button"] = typeof(GwenNetLua.Control.Button);
 
+			UserData.RegisterProxyType<GwenNetLua.Control.Table, Gwen.Control.Table>(r => new GwenNetLua.Control.Table(r));
+			gwen["Table"] = typeof(GwenNetLua.Control.Table);
+
 			gwen.MetaTable = new Table(script);
 			gwen.MetaTable["__metatable"] = "Read-only";
 			gwen.MetaTable["__index"] = gwen;

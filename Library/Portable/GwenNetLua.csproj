@@ -45,6 +45,7 @@
     <Compile Include="Control\Canvas.cs" />
     <Compile Include="Control\Internal\ControlBase.cs" />
     <Compile Include="Control\StackLayout.cs" />
+    <Compile Include="Control\Table.cs" />
     <Compile Include="Font.cs" />
     <Compile Include="Init.cs" />
     <Compile Include="Margin.cs" />

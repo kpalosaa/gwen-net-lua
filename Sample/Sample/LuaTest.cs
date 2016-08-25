@@ -19,20 +19,17 @@ namespace GwenNetLua.Sample
 		{
 			 script.DoString(
 @"
-	function OnClicked(s, e)
-		button.Left = button.Left + 5
-		-- print('OnClicked', s, e)
-	end
+	data = 
+	{
+		[0] = { name = 'test1' },
+		[1] = { name = 'test2' }
+	}
 
-	button = Gwen.Button.Create(Gwen.Canvas)
-	button.Margin = Gwen.Margin.Create(4)
-	button.Width = 200
-	button.Height = 50
-	button.Text = 'Test button'
-	button.Alignment = Gwen.Alignment.Left
-	button.TextPadding = Gwen.Padding.Create(5)
-	button.IsToggle = true
-	button.Clicked.add(OnClicked)
+	table = Gwen.Table.Create(Gwen.Canvas)
+	table.Width = 200
+	table.Height = 200
+	table.DisplayMember = 'name'
+	table.ItemsSource = data
 ");
 		}
 	}
