@@ -11,7 +11,7 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
-		public Button(Gwen.Control.Button control)
+		public Button(Gwen.Control.ControlBase control)
 			: base(control)
 		{
 		}

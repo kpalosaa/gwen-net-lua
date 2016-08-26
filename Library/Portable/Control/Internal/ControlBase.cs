@@ -24,6 +24,10 @@ namespace GwenNetLua.Control.Internal
 
 		public string Name { get { return target.Name; } set { target.Name = value; } }
 
+		public Gwen.Dock Dock { get { return target.Dock; } set { target.Dock = value; } }
+		public Gwen.HorizontalAlignment HorizontalAlignment { get { return target.HorizontalAlignment; } set { target.HorizontalAlignment = value; } }
+		public Gwen.VerticalAlignment VerticalAlignment { get { return target.VerticalAlignment; } set { target.VerticalAlignment = value; } }
+
 		public int Left { get { return target.Left; } set { target.Left = value; } }
 		public int Top { get { return target.Top; } set { target.Top = value; } }
 		public int Width { get { return target.Width; } set { target.Width = value; } }

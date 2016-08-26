@@ -30,6 +30,10 @@ namespace GwenNetLua
 
 			UserData.RegisterType<EventArgs>();
 			UserData.RegisterType<Gwen.Control.ClickedEventArgs>();
+			UserData.RegisterType<Gwen.Control.LinkClickedEventArgs>();
+			UserData.RegisterType<Gwen.Control.MessageBoxResultEventArgs>();
+
+			UserData.RegisterProxyType<GwenNetLua.Control.ItemSelectedEventArgs, Gwen.Control.ItemSelectedEventArgs>(r => new GwenNetLua.Control.ItemSelectedEventArgs(r));
 
 			// Register structs
 
@@ -83,6 +87,41 @@ namespace GwenNetLua
 			UserData.RegisterProxyType<GwenNetLua.Control.Table, Gwen.Control.Table>(r => new GwenNetLua.Control.Table(r));
 			gwen["Table"] = typeof(GwenNetLua.Control.Table);
 
+			UserData.RegisterProxyType<GwenNetLua.Control.TableRow, Gwen.Control.TableRow>(r => new GwenNetLua.Control.TableRow(r));
+			gwen["TableRow"] = typeof(GwenNetLua.Control.TableRow);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.ListBox, Gwen.Control.ListBox>(r => new GwenNetLua.Control.ListBox(r));
+			gwen["ListBox"] = typeof(GwenNetLua.Control.ListBox);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.ListBoxRow, Gwen.Control.ListBoxRow>(r => new GwenNetLua.Control.ListBoxRow(r));
+			gwen["ListBoxRow"] = typeof(GwenNetLua.Control.ListBoxRow);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.CheckBox, Gwen.Control.CheckBox>(r => new GwenNetLua.Control.CheckBox(r));
+			gwen["CheckBox"] = typeof(GwenNetLua.Control.CheckBox);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.RadioButtonGroup, Gwen.Control.RadioButtonGroup>(r => new GwenNetLua.Control.RadioButtonGroup(r));
+			gwen["RadioButtonGroup"] = typeof(GwenNetLua.Control.RadioButtonGroup);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.GroupBox, Gwen.Control.GroupBox>(r => new GwenNetLua.Control.GroupBox(r));
+			gwen["GroupBox"] = typeof(GwenNetLua.Control.GroupBox);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.Label, Gwen.Control.Label>(r => new GwenNetLua.Control.Label(r));
+			gwen["Label"] = typeof(GwenNetLua.Control.Label);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.TextBox, Gwen.Control.TextBox>(r => new GwenNetLua.Control.TextBox(r));
+			gwen["TextBox"] = typeof(GwenNetLua.Control.TextBox);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.TextBoxNumeric, Gwen.Control.TextBoxNumeric>(r => new GwenNetLua.Control.TextBoxNumeric(r));
+			gwen["TextBoxNumeric"] = typeof(GwenNetLua.Control.TextBoxNumeric);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.TextBoxPassword, Gwen.Control.TextBoxPassword>(r => new GwenNetLua.Control.TextBoxPassword(r));
+			gwen["TextBoxPassword"] = typeof(GwenNetLua.Control.TextBoxPassword);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.MultilineTextBox, Gwen.Control.MultilineTextBox>(r => new GwenNetLua.Control.MultilineTextBox(r));
+			gwen["MultilineTextBox"] = typeof(GwenNetLua.Control.MultilineTextBox);
+
+			// Protect namespace
+
 			gwen.MetaTable = new Table(script);
 			gwen.MetaTable["__metatable"] = "Read-only";
 			gwen.MetaTable["__index"] = gwen;
@@ -91,6 +130,8 @@ namespace GwenNetLua
 				throw new ScriptRuntimeException($"{index} is read-only");
 			});
 
+			// Set namespace
+			
 			script.Globals["Gwen"] = gwen;
 		}
 	}
