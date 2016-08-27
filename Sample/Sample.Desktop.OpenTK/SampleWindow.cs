@@ -12,7 +12,7 @@ namespace GwenNetLua.Sample.Desktop.OpenTK
 	/// <summary>
 	/// Demonstrates the GameWindow class.
 	/// </summary>
-	public class UnitTestGameWindow : GameWindow
+	public class SampleWindow : GameWindow
 	{
 		private Gwen.Renderer.OpenTK.Input.OpenTK m_Input;
 		private Gwen.Renderer.OpenTK.OpenTKBase m_Renderer;
@@ -27,9 +27,9 @@ namespace GwenNetLua.Sample.Desktop.OpenTK
 
 		private bool m_AltDown = false;
 
-		private LuaTest luaTest;
+		private Sample luaTest;
 
-		public UnitTestGameWindow()
+		public SampleWindow()
 			: base(1024, 768, new GraphicsMode(), "Gwen OpenTK Renderer", GameWindowFlags.Default, DisplayDevice.Default, 4, 2, GraphicsContextFlags.Default)
 			//: base(1024, 768)
 		{
@@ -141,7 +141,7 @@ namespace GwenNetLua.Sample.Desktop.OpenTK
 			m_Stopwatch.Restart();
 			m_LastTime = 0;
 
-			luaTest = new Sample.LuaTest(m_Canvas);
+			luaTest = new GwenNetLua.Sample.Sample(m_Canvas);
 			luaTest.Run();
 		}
 
@@ -206,9 +206,9 @@ namespace GwenNetLua.Sample.Desktop.OpenTK
 		{
 			using (Toolkit.Init())
 			{
-				using (UnitTestGameWindow window = new UnitTestGameWindow())
+				using (SampleWindow window = new SampleWindow())
 				{
-					window.Title = "Gwen.net OpenTK Unit Test";
+					window.Title = "Gwen.net Lua OpenTK Sample";
 					window.VSync = VSyncMode.Off; // to measure performance
 					window.Run(0.0, 0.0);
 				}

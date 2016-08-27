@@ -29,6 +29,8 @@ namespace GwenNetLua.Control.Internal
 
 		public object UserData { get { return target.UserData; } set { target.UserData = value; } }
 
+		public ControlBase Parent { set { target.Parent = value.Target; } }
+
 		public Gwen.Dock Dock { get { return target.Dock; } set { target.Dock = value; } }
 		public Gwen.HorizontalAlignment HorizontalAlignment { get { return target.HorizontalAlignment; } set { target.HorizontalAlignment = value; } }
 		public Gwen.VerticalAlignment VerticalAlignment { get { return target.VerticalAlignment; } set { target.VerticalAlignment = value; } }
@@ -55,6 +57,8 @@ namespace GwenNetLua.Control.Internal
 		public bool IsDisabled { get { return target.IsDisabled; } set { target.IsDisabled = value; } }
 
 		public string ToolTipText { get { return target.ToolTipText; } set { target.ToolTipText = value; } }
+
+		public bool DrawDebugOutlines { get { return target.DrawDebugOutlines; } set { target.DrawDebugOutlines = value; } }
 
 		public void AddAccelerator(string accelerator) { target.AddAccelerator(accelerator); }
 		public void AddAccelerator(string accelerator, Gwen.Control.ControlBase.GwenEventHandler<EventArgs> handler) { target.AddAccelerator(accelerator, handler); }

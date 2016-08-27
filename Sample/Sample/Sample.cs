@@ -5,11 +5,11 @@ using MoonSharp.Interpreter;
 
 namespace GwenNetLua.Sample
 {
-	public class LuaTest
+	public class Sample
 	{
 		private Script script;
 
-		public LuaTest(Gwen.Control.Canvas canvas)
+		public Sample(Gwen.Control.Canvas canvas)
 		{
 			script = new Script(CoreModules.Preset_SoftSandbox);
 			script.Options.DebugPrint = t => System.Diagnostics.Debug.WriteLine(t);
@@ -19,7 +19,7 @@ namespace GwenNetLua.Sample
 
 		public void Run()
 		{
-			var assembly = typeof(LuaTest).GetTypeInfo().Assembly;
+			var assembly = typeof(Sample).GetTypeInfo().Assembly;
 
 			using (Stream stream = assembly.GetManifestResourceStream("GwenNetLua.Sample.Lua.Sample.lua"))
 			{
