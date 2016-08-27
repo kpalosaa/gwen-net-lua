@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using MoonSharp.Interpreter;
 
 namespace GwenNetLua.Control.Internal
@@ -57,6 +58,10 @@ namespace GwenNetLua.Control.Internal
 		public bool IsDisabled { get { return target.IsDisabled; } set { target.IsDisabled = value; } }
 
 		public string ToolTipText { get { return target.ToolTipText; } set { target.ToolTipText = value; } }
+
+		public IEnumerable Children { get { return target.Children; } }
+
+		public string Type { get { return target.GetType().Name; } }
 
 		public bool DrawDebugOutlines { get { return target.DrawDebugOutlines; } set { target.DrawDebugOutlines = value; } }
 

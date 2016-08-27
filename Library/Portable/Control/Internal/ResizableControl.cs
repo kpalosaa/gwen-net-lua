@@ -13,6 +13,7 @@ namespace GwenNetLua.Control.Internal
 
 		public bool ClampMovement { get { return GetTarget<Gwen.Control.ResizableControl>().ClampMovement; } set { GetTarget<Gwen.Control.ResizableControl>().ClampMovement = value; } }
 		public Gwen.Control.Resizing Resizing { get { return GetTarget<Gwen.Control.ResizableControl>().Resizing; } set { GetTarget<Gwen.Control.ResizableControl>().Resizing = value; } }
+		public Gwen.Control.ControlBase Content { get { return GetTarget<Gwen.Control.ResizableControl>().Content; } }
 
 		public void EnableResizing(bool left = true, bool top = true, bool right = true, bool bottom = true) { GetTarget<Gwen.Control.ResizableControl>().EnableResizing(left, top, right, bottom); }
 

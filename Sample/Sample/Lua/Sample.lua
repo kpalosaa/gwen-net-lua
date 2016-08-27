@@ -30,6 +30,12 @@ function OnDebugOutlinesChanged(sender, e)
 
 	itemArea.DrawDebugOutlines = debugOutlines.IsChecked
 
+	for _, control in pairs(Gwen.Canvas.Children) do
+		if control.Type == "Window" then
+			control.Content.DrawDebugOutlines = debugOutlines.IsChecked
+		end
+	end
+
 end
 
 dock = Gwen.DockControl.Create(Gwen.Canvas)

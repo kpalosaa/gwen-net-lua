@@ -50,6 +50,7 @@
     <Compile Include="Control\FlowLayout.cs" />
     <Compile Include="Control\GridLayout.cs" />
     <Compile Include="Control\GroupBox.cs" />
+    <Compile Include="Control\HorizontalLayout.cs" />
     <Compile Include="Control\HorizontalSlider.cs" />
     <Compile Include="Control\HorizontalSplitter.cs" />
     <Compile Include="Control\ImagePanel.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Control\Canvas.cs" />
     <Compile Include="Control\Internal\ComboBoxBase.cs" />
     <Compile Include="Control\Internal\ControlBase.cs" />
+    <Compile Include="Control\Internal\InnerContentControl.cs" />
     <Compile Include="Control\Internal\ResizableControl.cs" />
     <Compile Include="Control\Internal\Slider.cs" />
     <Compile Include="Control\Internal\WindowBase.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Control\ToolWindow.cs" />
     <Compile Include="Control\TreeControl.cs" />
     <Compile Include="Control\TreeNode.cs" />
+    <Compile Include="Control\VerticalLayout.cs" />
     <Compile Include="Control\VerticalSlider.cs" />
     <Compile Include="Control\VerticalSplitter.cs" />
     <Compile Include="Control\Window.cs" />

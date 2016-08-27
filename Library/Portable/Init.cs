@@ -81,6 +81,10 @@ namespace GwenNetLua
 			UserData.RegisterProxyType<GwenNetLua.Control.Canvas, Gwen.Control.Canvas>(r => new GwenNetLua.Control.Canvas(r));
 			gwen["Canvas"] = new GwenNetLua.Control.Canvas(canvas);
 
+			// Register non-creatable controls
+
+			UserData.RegisterProxyType<GwenNetLua.Control.Internal.InnerContentControl, Gwen.Control.Internal.InnerContentControl>(r => new GwenNetLua.Control.Internal.InnerContentControl(r));
+
 			// Register creatable controls
 
 			UserData.RegisterProxyType<GwenNetLua.Control.AnchorLayout, Gwen.Control.Layout.AnchorLayout>(r => new GwenNetLua.Control.AnchorLayout(r));
@@ -124,6 +128,9 @@ namespace GwenNetLua
 
 			UserData.RegisterProxyType<GwenNetLua.Control.GroupBox, Gwen.Control.GroupBox>(r => new GwenNetLua.Control.GroupBox(r));
 			gwen["GroupBox"] = typeof(GwenNetLua.Control.GroupBox);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.HorizontalLayout, Gwen.Control.Layout.HorizontalLayout>(r => new GwenNetLua.Control.HorizontalLayout(r));
+			gwen["HorizontalLayout"] = typeof(GwenNetLua.Control.HorizontalLayout);
 
 			UserData.RegisterProxyType<GwenNetLua.Control.HorizontalSlider, Gwen.Control.HorizontalSlider>(r => new GwenNetLua.Control.HorizontalSlider(r));
 			gwen["HorizontalSlider"] = typeof(GwenNetLua.Control.HorizontalSlider);
@@ -208,6 +215,9 @@ namespace GwenNetLua
 
 			UserData.RegisterProxyType<GwenNetLua.Control.TreeNode, Gwen.Control.TreeNode>(r => new GwenNetLua.Control.TreeNode(r));
 			gwen["TreeNode"] = typeof(GwenNetLua.Control.TreeNode);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.VerticalLayout, Gwen.Control.Layout.VerticalLayout>(r => new GwenNetLua.Control.VerticalLayout(r));
+			gwen["VerticalLayout"] = typeof(GwenNetLua.Control.VerticalLayout);
 
 			UserData.RegisterProxyType<GwenNetLua.Control.VerticalSlider, Gwen.Control.VerticalSlider>(r => new GwenNetLua.Control.VerticalSlider(r));
 			gwen["VerticalSlider"] = typeof(GwenNetLua.Control.VerticalSlider);
