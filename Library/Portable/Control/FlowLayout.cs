@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static FlowLayout Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new FlowLayout(control);
+		}
+
+		[MoonSharpHidden]
 		public FlowLayout(Gwen.Control.ControlBase control)
 			: base(control)
 		{

@@ -11,7 +11,16 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
-		public CheckBox(Gwen.Control.CheckBox control)
+		public static CheckBox Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new CheckBox(control);
+		}
+
+		[MoonSharpHidden]
+		public CheckBox(Gwen.Control.ControlBase control)
 			: base(control)
 		{
 		}

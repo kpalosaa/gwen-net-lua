@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static RadioButtonGroup Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new RadioButtonGroup(control);
+		}
+
+		[MoonSharpHidden]
 		public RadioButtonGroup(Gwen.Control.ControlBase control)
 			: base(control)
 		{

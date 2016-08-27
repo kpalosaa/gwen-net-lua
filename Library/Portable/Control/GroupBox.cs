@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static GroupBox Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new GroupBox(control);
+		}
+
+		[MoonSharpHidden]
 		public GroupBox(Gwen.Control.ControlBase control)
 			: base(control)
 		{

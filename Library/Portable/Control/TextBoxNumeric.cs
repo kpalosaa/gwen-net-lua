@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static new TextBoxNumeric Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new TextBoxNumeric(control);
+		}
+
+		[MoonSharpHidden]
 		public TextBoxNumeric(Gwen.Control.ControlBase control)
 			: base(control)
 		{

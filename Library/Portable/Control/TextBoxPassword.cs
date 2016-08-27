@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static new TextBoxPassword Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new TextBoxPassword(control);
+		}
+
+		[MoonSharpHidden]
 		public TextBoxPassword(Gwen.Control.ControlBase control)
 			: base(control)
 		{

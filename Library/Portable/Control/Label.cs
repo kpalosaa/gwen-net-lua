@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static Label Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new Label(control);
+		}
+
+		[MoonSharpHidden]
 		public Label(Gwen.Control.ControlBase control)
 			: base(control)
 		{

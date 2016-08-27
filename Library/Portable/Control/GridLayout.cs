@@ -13,6 +13,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static GridLayout Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new GridLayout(control);
+		}
+
+		[MoonSharpHidden]
 		public GridLayout(Gwen.Control.ControlBase control)
 			: base(control)
 		{

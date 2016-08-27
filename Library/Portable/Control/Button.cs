@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static Button Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new Button(control);
+		}
+
+		[MoonSharpHidden]
 		public Button(Gwen.Control.ControlBase control)
 			: base(control)
 		{

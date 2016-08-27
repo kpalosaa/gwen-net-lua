@@ -47,6 +47,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Lua\Sample.lua" />
+    <EmbeddedResource Include="Lua\Items\Button.lua" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +57,7 @@
       <Name>GwenNetLua</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

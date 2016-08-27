@@ -16,6 +16,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static ListBox Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new ListBox(control);
+		}
+
+		[MoonSharpHidden]
 		public ListBox(Gwen.Control.ControlBase control)
 			: base(control)
 		{
@@ -31,7 +40,7 @@ namespace GwenNetLua.Control
 		public int RowCount { get { return GetTarget<Gwen.Control.ListBox>().RowCount; } }
 		public object SelectedItem { get { return GetTarget<Gwen.Control.ListBox>().SelectedItem; } set { GetTarget<Gwen.Control.ListBox>().SelectedItem = value; } }
 		public int SelectedRowIndex { get { return GetTarget<Gwen.Control.ListBox>().SelectedRowIndex; } set { GetTarget<Gwen.Control.ListBox>().SelectedRowIndex = value; } }
-		public IEnumerable<int> SelectedRows { get { return GetTarget<Gwen.Control.ListBox>().SelectedRows.Select(i => GetTarget<Gwen.Control.ListBox>().GetRowIndex(i)); } }
+		public IEnumerable<int> SelectedRowIndexes { get { return GetTarget<Gwen.Control.ListBox>().SelectedRows.Select(i => GetTarget<Gwen.Control.ListBox>().GetRowIndex(i)); } }
 		public bool IsToggle { get { return GetTarget<Gwen.Control.ListBox>().IsToggle; } set { GetTarget<Gwen.Control.ListBox>().IsToggle = value; } }
 
 		public int AddRow(object item) { return GetTarget<Gwen.Control.ListBox>().GetRowIndex(GetTarget<Gwen.Control.ListBox>().AddRow(item)); }
@@ -49,7 +58,7 @@ namespace GwenNetLua.Control
 		public void SelectRow(int index, bool clearOthers = false) { GetTarget<Gwen.Control.ListBox>().SelectRow(index, clearOthers); }
 		public void SelectRow(object item, bool clearOthers = false) { GetTarget<Gwen.Control.ListBox>().SelectRow(item, clearOthers); }
 		public void SelectRows(string rowText, bool clearOthers = false) { GetTarget<Gwen.Control.ListBox>().SelectRows(rowText, clearOthers); }
-		public virtual void UnselectAll() { GetTarget<Gwen.Control.ListBox>().UnselectAll(); }
+		public void UnselectAll() { GetTarget<Gwen.Control.ListBox>().UnselectAll(); }
 
 		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ItemSelectedEventArgs> RowDoubleClicked
 		{

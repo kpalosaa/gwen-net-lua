@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static StackLayout Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new StackLayout(control);
+		}
+
+		[MoonSharpHidden]
 		public StackLayout(Gwen.Control.ControlBase control)
 			: base(control)
 		{

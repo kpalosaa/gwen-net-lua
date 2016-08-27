@@ -3,13 +3,16 @@ using MoonSharp.Interpreter;
 
 namespace GwenNetLua.Control.Internal
 {
-	public class ControlBase
+	public abstract class ControlBase : IEquatable<ControlBase>
 	{
 		private Gwen.Control.ControlBase target;
 
 		[MoonSharpHidden]
-		public ControlBase(Gwen.Control.ControlBase target)
+		protected ControlBase(Gwen.Control.ControlBase target)
 		{
+			if (target == null)
+				throw new ScriptRuntimeException("Target must not be null");
+
 			this.target = target;
 		}
 
@@ -23,6 +26,8 @@ namespace GwenNetLua.Control.Internal
 		public Gwen.Control.ControlBase Target { get { return target; } }
 
 		public string Name { get { return target.Name; } set { target.Name = value; } }
+
+		public object UserData { get { return target.UserData; } set { target.UserData = value; } }
 
 		public Gwen.Dock Dock { get { return target.Dock; } set { target.Dock = value; } }
 		public Gwen.HorizontalAlignment HorizontalAlignment { get { return target.HorizontalAlignment; } set { target.HorizontalAlignment = value; } }
@@ -50,5 +55,54 @@ namespace GwenNetLua.Control.Internal
 		public bool IsDisabled { get { return target.IsDisabled; } set { target.IsDisabled = value; } }
 
 		public string ToolTipText { get { return target.ToolTipText; } set { target.ToolTipText = value; } }
+
+		public void AddAccelerator(string accelerator) { target.AddAccelerator(accelerator); }
+		public void AddAccelerator(string accelerator, Gwen.Control.ControlBase.GwenEventHandler<EventArgs> handler) { target.AddAccelerator(accelerator, handler); }
+		public void Blur() { target.Blur(); }
+		public void BringNextToControl(ControlBase child, bool behind) { target.BringNextToControl(child.Target, behind); }
+		public void BringToFront() { target.BringToFront(); }
+		public void DelayedDelete() { target.DelayedDelete(); }
+		public void DeleteAllChildren() { target.DeleteAllChildren(); }
+		public void Focus() { target.Focus(); }
+		public void SendToBack() { target.SendToBack(); }
+		public void Touch() { target.Touch(); }
+
+		public bool Equals(ControlBase other)
+		{
+			return target == other.target;
+		}
+
+		public override bool Equals(Object obj)
+		{
+			if (obj == null)
+				return false;
+
+			ControlBase control = obj as ControlBase;
+			if (control == null)
+				return false;
+			else
+				return Equals(control);
+		}
+
+		public override int GetHashCode()
+		{
+			return target.GetHashCode();
+		}
+
+		public static bool operator ==(ControlBase control1, ControlBase control2)
+		{
+			if (control1 == null || control2 == null)
+				return Object.Equals(control1, control2);
+
+			return control1.Equals(control2);
+		}
+
+		public static bool operator !=(ControlBase control1, ControlBase control2)
+		{
+			if (control1 == null || control2 == null)
+				return !Object.Equals(control1, control2);
+
+			return !(control1.Equals(control2));
+		}
 	}
 }

@@ -15,6 +15,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static Table Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new Table(control);
+		}
+
+		[MoonSharpHidden]
 		public Table(Gwen.Control.ControlBase control)
 			: base(control)
 		{

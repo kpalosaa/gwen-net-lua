@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static AnchorLayout Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new AnchorLayout(control);
+		}
+
+		[MoonSharpHidden]
 		public AnchorLayout(Gwen.Control.ControlBase control)
 			: base(control)
 		{

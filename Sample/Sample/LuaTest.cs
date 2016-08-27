@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
 using MoonSharp.Interpreter;
 
 namespace GwenNetLua.Sample
@@ -17,7 +19,29 @@ namespace GwenNetLua.Sample
 
 		public void Run()
 		{
-			 script.DoString(
+			var assembly = typeof(LuaTest).GetTypeInfo().Assembly;
+
+			using (Stream stream = assembly.GetManifestResourceStream("GwenNetLua.Sample.Lua.Sample.lua"))
+			{
+				script.DoStream(stream);
+			}
+
+			foreach (var res in assembly.GetManifestResourceNames())
+			{
+				if (res != "GwenNetLua.Sample.Lua.Sample.lua")
+				{
+					using (Stream stream = assembly.GetManifestResourceStream(res))
+					{
+						script.DoStream(stream);
+					}
+				}
+			}
+
+
+
+
+#if false
+			script.DoString(
 @"
 
 	data = 
@@ -41,6 +65,7 @@ namespace GwenNetLua.Sample
 	label.Dock = Gwen.Dock.Top
 
 ");
+#endif
 		}
 	}
 }

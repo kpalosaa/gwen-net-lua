@@ -11,6 +11,15 @@ namespace GwenNetLua.Control
 		}
 
 		[MoonSharpHidden]
+		public static MultilineTextBox Create(Gwen.Control.ControlBase control)
+		{
+			if (control == null)
+				return null;
+			else
+				return new MultilineTextBox(control);
+		}
+
+		[MoonSharpHidden]
 		public MultilineTextBox(Gwen.Control.ControlBase control)
 			: base(control)
 		{
