@@ -37,6 +37,52 @@ namespace GwenNetLua.Sample
 				}
 			}
 
+			script.DoString(
+@"
+function TestComp(view)
+	local self = Gwen.ComponentBase(view)
+
+	function self.handler()
+		print('Clicked TestComp')
+		comp = self.GetComponent('testComp2')
+		comp.inc()
+	end
+
+	function self.ev()
+		print('TestEvent')
+	end
+
+	return self
+end
+
+function TestComp2(view)
+	local self = Gwen.ComponentBase(view)
+
+	self.Attr = 0
+	self.TestEvent = Gwen.Event.Create('TestEvent')
+
+	function self.handler()
+		print('Clicked TestComp2')
+		self.TestEvent.Invoke(self.GetView(), {})
+		control = self.GetControl('button')
+		control.Text = 'button'
+	end
+
+	function self.inc()
+		print('Attr ' .. self.Attr)
+		self.Attr = self.Attr + 100
+	end
+
+	return self
+end
+
+	Gwen.Component.Register('TestComp2', '<VerticalLayout><Button Name=\'button\' Width=\'100\' Height=\'100\' Clicked=\'handler\' /></VerticalLayout>')
+
+	Gwen.Component.Register('TestComp', '<VerticalLayout><Button Width=\'200\' Height=\'50\' Clicked=\'handler\' /><TestComp2 Name=\'testComp2\' Attr=\'565\' TestEvent=\'ev\' /></VerticalLayout>')
+
+	testComp = Gwen.Component.Create('TestComp', Gwen.Canvas)
+
+");
 
 
 

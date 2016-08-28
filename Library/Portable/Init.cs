@@ -228,6 +228,30 @@ namespace GwenNetLua
 			UserData.RegisterProxyType<GwenNetLua.Control.Window, Gwen.Control.Window>(r => new GwenNetLua.Control.Window(r));
 			gwen["Window"] = typeof(GwenNetLua.Control.Window);
 
+			// Register component types
+
+			UserData.RegisterType<Xml.ComponentServices>();
+			gwen["Component"] = new Xml.ComponentServices(script);
+
+			UserData.RegisterType<Xml.LuaEvent>();
+			gwen["Event"] = typeof(Xml.LuaEvent);
+
+			script.DoString(@"
+				function ComponentBase(view)
+					local self = {}
+					local compView = view
+					function self.GetView()
+						return compView
+					end
+					function self.GetControl(name)
+						return Component.GetControl(compView, name)
+					end
+					function self.GetComponent(name)
+						return Component.GetComponent(compView, name)
+					end
+					return self
+				end", gwen);
+
 			// Protect namespace
 
 			gwen.MetaTable = new Table(script);

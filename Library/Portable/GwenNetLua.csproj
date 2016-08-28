@@ -94,12 +94,16 @@
     <Compile Include="Control\Window.cs" />
     <Compile Include="Font.cs" />
     <Compile Include="Init.cs" />
+    <Compile Include="Xml\ComponentServices.cs" />
+    <Compile Include="Xml\LuaComponent.cs" />
     <Compile Include="Margin.cs" />
     <Compile Include="Padding.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Size.cs" />
+    <Compile Include="Xml\LuaEvent.cs" />
+    <Compile Include="Xml\LuaEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Gwen">
