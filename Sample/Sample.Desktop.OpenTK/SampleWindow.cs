@@ -119,7 +119,8 @@ namespace GwenNetLua.Sample.Desktop.OpenTK
 		{
 			GL.ClearColor(System.Drawing.Color.MidnightBlue);
 
-			Gwen.Platform.Platform.Init(new Gwen.Platform.Windows());
+			Gwen.Platform.Platform.Init(new Gwen.Platform.Windows.WindowsPlatform());
+			Gwen.Loader.LoaderBase.Init(new Gwen.Platform.Windows.FileLoader());
 
 			//m_Renderer = new Gwen.Renderer.OpenTK.OpenTKGL10();
 			//m_Renderer = new Gwen.Renderer.OpenTK.OpenTKGL20();

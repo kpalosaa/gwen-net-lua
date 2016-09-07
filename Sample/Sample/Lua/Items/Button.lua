@@ -24,14 +24,14 @@ hlayout = Gwen.HorizontalLayout.Create(Gwen.Canvas)
 		button = Gwen.Button.Create(vlayout)
 		button.Margin = Gwen.Margin.Create(5)
 		button.Padding = Gwen.Padding.Create(3)
-		button.Alignment = Gwen.Alignment.Left and Gwen.Alignment.CenterV
+		button.Alignment = Gwen.Alignment.Left .. Gwen.Alignment.CenterV
 		button.Text = "Image button (left)"
 		button.ImageName = "test16.png"
 
 		button = Gwen.Button.Create(vlayout)
 		button.Margin = Gwen.Margin.Create(5)
 		button.Padding = Gwen.Padding.Create(3)
-		button.Alignment = Gwen.Alignment.Right and Gwen.Alignment.CenterV
+		button.Alignment = Gwen.Alignment.Right .. Gwen.Alignment.CenterV
 		button.Text = "Image button (right)"
 		button.ImageName = "test16.png"
 
@@ -40,14 +40,14 @@ hlayout = Gwen.HorizontalLayout.Create(Gwen.Canvas)
 		button.Padding = Gwen.Padding.Create(3)
 		button.Text = "Image button (image left)"
 		button.ImageName = "test16.png"
-		button.ImageAlign = Gwen.ImageAlign.Left and Gwen.ImageAlign.CenterV
+		button.ImageAlign = Gwen.ImageAlign.Left .. Gwen.ImageAlign.CenterV
 
 		button = Gwen.Button.Create(vlayout)
 		button.Margin = Gwen.Margin.Create(5)
 		button.Padding = Gwen.Padding.Create(3)
 		button.Text = "Image button (image right)"
 		button.ImageName = "test16.png"
-		button.ImageAlign = Gwen.ImageAlign.Right and Gwen.ImageAlign.CenterV
+		button.ImageAlign = Gwen.ImageAlign.Right .. Gwen.ImageAlign.CenterV
 
 		button = Gwen.Button.Create(vlayout)
 		button.Margin = Gwen.Margin.Create(5)
