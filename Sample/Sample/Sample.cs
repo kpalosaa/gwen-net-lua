@@ -23,20 +23,43 @@ namespace GwenNetLua.Sample
 
 			using (Stream stream = assembly.GetManifestResourceStream("GwenNetLua.Sample.Lua.Sample.lua"))
 			{
-				script.DoStream(stream);
+				try
+				{
+					script.DoStream(stream);
+				}
+				catch (ScriptRuntimeException ex)
+				{
+					throw new Exception(String.Format("Runtime error in '{0}': {1}", "GwenNetLua.Sample.Lua.Sample.lua", ex.DecoratedMessage), ex);
+				}
+				catch (SyntaxErrorException ex)
+				{
+					throw new Exception(String.Format("Syntax error in '{0}': {1}", "GwenNetLua.Sample.Lua.Sample.lua", ex.DecoratedMessage), ex);
+				}
 			}
 
 			foreach (var res in assembly.GetManifestResourceNames())
 			{
-				if (res != "GwenNetLua.Sample.Lua.Sample.lua")
+				if (res != "GwenNetLua.Sample.Lua.Sample.lua" && res.Contains(".lua"))
 				{
 					using (Stream stream = assembly.GetManifestResourceStream(res))
 					{
-						script.DoStream(stream);
+						try
+						{
+							script.DoStream(stream);
+						}
+						catch (ScriptRuntimeException ex)
+						{
+							throw new Exception(String.Format("Runtime error in '{0}': {1}", res, ex.DecoratedMessage), ex);
+						}
+						catch (SyntaxErrorException ex)
+						{
+							throw new Exception(String.Format("Syntax error in '{0}': {1}", res, ex.DecoratedMessage), ex);
+						}
 					}
 				}
 			}
 
+#if false
 			script.DoString(
 @"
 function TestComp(view)
@@ -83,7 +106,7 @@ end
 	testComp = Gwen.Component.Create('TestComp', Gwen.Canvas)
 
 ");
-
+#endif
 
 
 #if false

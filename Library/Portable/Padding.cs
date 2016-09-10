@@ -20,6 +20,13 @@ namespace GwenNetLua
 			return new Padding(left, top, right, bottom);
 		}
 
+		public static readonly Padding Zero = new Padding(Gwen.Padding.Zero);
+		public static readonly Padding One = new Padding(Gwen.Padding.One);
+		public static readonly Padding Two = new Padding(Gwen.Padding.Two);
+		public static readonly Padding Three = new Padding(Gwen.Padding.Three);
+		public static readonly Padding Four = new Padding(Gwen.Padding.Four);
+		public static readonly Padding Five = new Padding(Gwen.Padding.Five);
+
 		[MoonSharpHidden]
 		public Padding(int left, int top, int right, int bottom)
 		{

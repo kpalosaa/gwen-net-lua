@@ -1,6 +1,17 @@
 ﻿
 function AddItem(category, name, item)
 
+	local function OnItemClicked(sender, e)
+
+		if lastItem != nil then
+			lastItem.IsCollapsed = true
+		end
+
+		lastItem = sender.UserData
+		lastItem.IsCollapsed = false
+
+	end
+
 	cat = list.FindChildByName(category)
 	if cat == nil then
 		cat = list.Add(category)
@@ -15,18 +26,14 @@ function AddItem(category, name, item)
 
 end
 
-function OnItemClicked(sender, e)
+function ItemPrint(text)
 
-	if lastItem != nil then
-		lastItem.IsCollapsed = true
-	end
-
-	lastItem = sender.UserData
-	lastItem.IsCollapsed = false
+	textOutput.AddRow(text)
+	textOutput.ScrollToBottom()
 
 end
 
-function OnDebugOutlinesChanged(sender, e)
+local function OnDebugOutlinesChanged(sender, e)
 
 	itemArea.DrawDebugOutlines = debugOutlines.IsChecked
 

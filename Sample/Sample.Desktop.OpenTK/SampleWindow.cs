@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+using System.Reflection;
 using OpenTK;
 using OpenTK.Input;
 using OpenTK.Graphics;
@@ -120,13 +120,13 @@ namespace GwenNetLua.Sample.Desktop.OpenTK
 			GL.ClearColor(System.Drawing.Color.MidnightBlue);
 
 			Gwen.Platform.Platform.Init(new Gwen.Platform.Windows.WindowsPlatform());
-			Gwen.Loader.LoaderBase.Init(new Gwen.Platform.Windows.FileLoader());
+			Gwen.Loader.LoaderBase.Init(new Gwen.Loader.EmbeddedResourceLoader(typeof(GwenNetLua.Sample.Sample).Assembly, typeof(GwenNetLua.Sample.Sample).Namespace + ".Images", typeof(GwenNetLua.Sample.Sample).Namespace + ".Xml"));
 
 			//m_Renderer = new Gwen.Renderer.OpenTK.OpenTKGL10();
 			//m_Renderer = new Gwen.Renderer.OpenTK.OpenTKGL20();
 			m_Renderer = new Gwen.Renderer.OpenTK.OpenTKGL40();
 
-			m_Skin = new Gwen.Skin.TexturedBase(m_Renderer, "DefaultSkin.png");
+			m_Skin = new Gwen.Skin.TexturedBase(m_Renderer, "Skins/DefaultSkin.png");
 			m_Skin.DefaultFont = new Gwen.Font(m_Renderer, "Arial", 11);
 			m_Canvas = new Gwen.Control.Canvas(m_Skin);
 			m_Input = new Gwen.Renderer.OpenTK.Input.OpenTK(this);

@@ -30,7 +30,7 @@ namespace GwenNetLua.Control
 		}
 
 		public bool AlternateColor { get { return GetTarget<Gwen.Control.Table>().AlternateColor; } set { GetTarget<Gwen.Control.Table>().AlternateColor = value; } }
-		public bool AutoSizeToContent { get { return GetTarget<Gwen.Control.Table>().AutoSizeToContent; } set { GetTarget<Gwen.Control.Table>().AutoSizeToContent = value; } }
+		public bool AutoSizeColumnsToContent { get { return GetTarget<Gwen.Control.Table>().AutoSizeColumnsToContent; } set { GetTarget<Gwen.Control.Table>().AutoSizeColumnsToContent = value; } }
 		public int ColumnCount { get { return GetTarget<Gwen.Control.Table>().ColumnCount; } set { GetTarget<Gwen.Control.Table>().ColumnCount = value; } }
 		public string DisplayMember { get { return GetTarget<Gwen.Control.Table>().DisplayMember; } set { GetTarget<Gwen.Control.Table>().DisplayMember = value; } }
 		public string[] DisplayMembers { get { return GetTarget<Gwen.Control.Table>().DisplayMembers; } set { GetTarget<Gwen.Control.Table>().DisplayMembers = value; } }
@@ -46,7 +46,7 @@ namespace GwenNetLua.Control
 		public void RemoveRow(int idx) { GetTarget<Gwen.Control.Table>().RemoveRow(idx); }
 		public void RemoveRow(object item) { GetTarget<Gwen.Control.Table>().RemoveRow(item); }
 		public void SetColumnWidth(int columnIndex, int width) { GetTarget<Gwen.Control.Table>().SetColumnWidth(columnIndex, width); }
-		public void SizeToContent(int maxWidth = 0) { GetTarget<Gwen.Control.Table>().SizeToContent(maxWidth); }
+		public void SizeColumnsToContent(int maxWidth = 0) { GetTarget<Gwen.Control.Table>().SizeColumnsToContent(maxWidth); }
 	}
 
 	internal class LuaTableRowFactory : Gwen.Control.Table.TableRowFactory
@@ -58,6 +58,12 @@ namespace GwenNetLua.Control
 
 		public override Gwen.Control.TableRow Create(object item)
 		{
+			if (item == null)
+				return null;
+			if (item is KeyValuePair<object, object>)
+				if (((KeyValuePair<object, object>)item).Value == null)
+					return null;
+
 			Gwen.Control.TableRow row = CreateRow();
 
 			SetRow(Table, row, item);
@@ -67,22 +73,22 @@ namespace GwenNetLua.Control
 
 		public static void SetRow(Gwen.Control.Table table, Gwen.Control.TableRow row, object item)
 		{
-			if (!(item is KeyValuePair<object, object>))
-				throw new ScriptRuntimeException("Expecting table item");
-
-			var keyValuePair = (KeyValuePair<object, object>)item;
-
 			string[] displayMembers = table.DisplayMembers;
 
 			if (displayMembers == null || displayMembers.Length == 0)
 			{
-				string text = keyValuePair.Value.ToString();
+				string text = item.ToString();
 				row.Text = text;
 				row.Name = text;
 				row.UserData = item;
 			}
 			else
 			{
+				if (!(item is KeyValuePair<object, object>))
+					throw new ScriptRuntimeException("Expecting table item");
+
+				var keyValuePair = (KeyValuePair<object, object>)item;
+
 				MoonSharp.Interpreter.Table luaTable = keyValuePair.Value as MoonSharp.Interpreter.Table;
 				if (luaTable == null)
 					throw new ScriptRuntimeException("Expecting table");

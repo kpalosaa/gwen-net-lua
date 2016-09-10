@@ -24,5 +24,7 @@ namespace GwenNetLua.Control
 			: base(control)
 		{
 		}
+
+		public bool IsSelected { get { return GetTarget<Gwen.Control.ListBoxRow>().IsSelected; } set { GetTarget<Gwen.Control.ListBoxRow>().IsSelected = value; } }
 	}
 }

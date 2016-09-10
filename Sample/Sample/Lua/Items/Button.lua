@@ -1,158 +1,130 @@
 ﻿
-hlayout = Gwen.HorizontalLayout.Create(Gwen.Canvas)
+this = Gwen.DockLayout.Create(Gwen.Canvas)
 
-	vlayout = Gwen.VerticalLayout.Create(hlayout)
-	vlayout.Width = 300
+	hlayout = Gwen.HorizontalLayout.Create(this)
 
-		button = Gwen.Button.Create(vlayout)
-		button.Margin = Gwen.Margin.Create(5)
-		button.Text = "Button"
+		vlayout = Gwen.VerticalLayout.Create(hlayout)
+		vlayout.Width = 300
 
-		button = Gwen.Button.Create(vlayout)
-		button.Margin = Gwen.Margin.Create(5)
-		button.Padding = Gwen.Padding.Create(3)
-		button.Text = "Image button (default)"
-		button.ImageName = "test16.png"
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Text = "Button"
 
-		button = Gwen.Button.Create(vlayout)
-		button.Margin = Gwen.Margin.Create(5)
-		button.Padding = Gwen.Padding.Create(3)
-		button.Text = "Image button (above)"
-		button.ImageName = "test16.png"
-		button.ImageAlign = Gwen.ImageAlign.Above
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Text = "Image button (default)"
+			button.ImageName = "test16.png"
 
-		button = Gwen.Button.Create(vlayout)
-		button.Margin = Gwen.Margin.Create(5)
-		button.Padding = Gwen.Padding.Create(3)
-		button.Alignment = Gwen.Alignment.Left .. Gwen.Alignment.CenterV
-		button.Text = "Image button (left)"
-		button.ImageName = "test16.png"
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Text = "Image button (above)"
+			button.ImageName = "test16.png"
+			button.ImageAlign = Gwen.ImageAlign.Above
 
-		button = Gwen.Button.Create(vlayout)
-		button.Margin = Gwen.Margin.Create(5)
-		button.Padding = Gwen.Padding.Create(3)
-		button.Alignment = Gwen.Alignment.Right .. Gwen.Alignment.CenterV
-		button.Text = "Image button (right)"
-		button.ImageName = "test16.png"
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Alignment = Gwen.Alignment.Left .. Gwen.Alignment.CenterV
+			button.Text = "Image button (left)"
+			button.ImageName = "test16.png"
 
-		button = Gwen.Button.Create(vlayout)
-		button.Margin = Gwen.Margin.Create(5)
-		button.Padding = Gwen.Padding.Create(3)
-		button.Text = "Image button (image left)"
-		button.ImageName = "test16.png"
-		button.ImageAlign = Gwen.ImageAlign.Left .. Gwen.ImageAlign.CenterV
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Alignment = Gwen.Alignment.Right .. Gwen.Alignment.CenterV
+			button.Text = "Image button (right)"
+			button.ImageName = "test16.png"
 
-		button = Gwen.Button.Create(vlayout)
-		button.Margin = Gwen.Margin.Create(5)
-		button.Padding = Gwen.Padding.Create(3)
-		button.Text = "Image button (image right)"
-		button.ImageName = "test16.png"
-		button.ImageAlign = Gwen.ImageAlign.Right .. Gwen.ImageAlign.CenterV
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Text = "Image button (image left)"
+			button.ImageName = "test16.png"
+			button.ImageAlign = Gwen.ImageAlign.Left .. Gwen.ImageAlign.CenterV
 
-		button = Gwen.Button.Create(vlayout)
-		button.Margin = Gwen.Margin.Create(5)
-		button.Padding = Gwen.Padding.Create(3)
-		button.Text = "Image button (image fill)"
-		button.ImageName = "test16.png"
-		button.ImageAlign = Gwen.ImageAlign.Fill
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Text = "Image button (image right)"
+			button.ImageName = "test16.png"
+			button.ImageAlign = Gwen.ImageAlign.Right .. Gwen.ImageAlign.CenterV
 
---[[
-			HorizontalLayout hlayout = new HorizontalLayout(this);
-			{
-				VerticalLayout vlayout = new VerticalLayout(hlayout);
-				vlayout.Width = 300;
-				{
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Text = "Image button (image fill)"
+			button.ImageName = "test16.png"
+			button.ImageAlign = Gwen.ImageAlign.Fill
 
+			hlayout2 = Gwen.HorizontalLayout.Create(vlayout)
 
-					button = new Control.Button(vlayout);
-					button.Margin = Margin.Five;
-					button.Padding = Padding.Three;
-					button.Text = "Image button (image fill)";
-					button.SetImage("test16.png", ImageAlign.Fill);
+				button = Gwen.Button.Create(hlayout2)
+				button.HorizontalAlignment = Gwen.HorizontalAlignment.Left
+				button.VerticalAlignment = Gwen.VerticalAlignment.Center
+				button.Padding = Gwen.Padding.Three
+				button.Margin = Gwen.Margin.Five
+				button.ImageName = "test16.png"
+				button.ImageSize = Gwen.Size.Create(32, 32)
 
-					HorizontalLayout hlayout2 = new HorizontalLayout(vlayout);
-					{
-						button = new Control.Button(hlayout2);
-						button.HorizontalAlignment = HorizontalAlignment.Left;
-						button.Padding = Padding.Three;
-						button.Margin = Margin.Five;
-						button.SetImage("test16.png");
-						button.ImageSize = new Size(32, 32);
+				button = Gwen.Button.Create(hlayout2)
+				button.HorizontalAlignment = Gwen.HorizontalAlignment.Left
+				button.VerticalAlignment = Gwen.VerticalAlignment.Center
+				button.Padding = Gwen.Padding.Three
+				button.Margin = Gwen.Margin.Five
+				button.ImageName = "test16.png"
 
-						button = new Control.Button(hlayout2);
-						button.HorizontalAlignment = HorizontalAlignment.Left;
-						button.VerticalAlignment = VerticalAlignment.Center;
-						button.Padding = Padding.Three;
-						button.Margin = Margin.Five;
-						button.SetImage("test16.png");
+				button = Gwen.Button.Create(hlayout2)
+				button.HorizontalAlignment = Gwen.HorizontalAlignment.Left
+				button.VerticalAlignment = Gwen.VerticalAlignment.Center
+				button.Padding = Gwen.Padding.Three
+				button.Margin = Gwen.Margin.Five
+				button.ImageName = "test16.png"
+				button.ImageTextureRect = Gwen.Rectangle.Create(4, 4, 8, 8)
 
-						button = new Control.Button(hlayout2);
-						button.HorizontalAlignment = HorizontalAlignment.Left;
-						button.VerticalAlignment = VerticalAlignment.Center;
-						button.Padding = Padding.Three;
-						button.Margin = Margin.Five;
-						button.SetImage("test16.png");
-						button.ImageTextureRect = new Rectangle(4, 4, 8, 8);
+				button = Gwen.Button.Create(hlayout2)
+				button.HorizontalAlignment = Gwen.HorizontalAlignment.Left
+				button.VerticalAlignment = Gwen.VerticalAlignment.Center
+				button.Padding = Gwen.Padding.Three
+				button.Margin = Gwen.Margin.Five
+				button.ImageName = "test16.png"
+				button.ImageColor = Gwen.Color.Create("DarkGrey")
 
-						button = new Control.Button(hlayout2);
-						button.HorizontalAlignment = HorizontalAlignment.Left;
-						button.VerticalAlignment = VerticalAlignment.Center;
-						button.Padding = Padding.Three;
-						button.Margin = Margin.Five;
-						button.SetImage("test16.png");
-						button.ImageColor = Color.DarkGrey;
-					}
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Create(20, 20, 20, 20)
+			button.Text = "Toggle me"
+			button.IsToggle = true
+			button.Toggled.add(function(sender, e) ItemPrint("Button: Toggled") end)
+			button.ToggledOn.add(function(sender, e) ItemPrint("Button: ToggledOn") end)
+			button.ToggledOff.add(function(sender, e) ItemPrint("Button: ToggledOff") end)
 
-					button = new Control.Button(vlayout);
-					button.Margin = Margin.Five;
-					button.Padding = new Padding(20, 20, 20, 20);
-					button.Text = "Toggle me";
-					button.IsToggle = true;
-					button.Toggled += onToggle;
-					button.ToggledOn += onToggleOn;
-					button.ToggledOff += onToggleOff;
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Text = "Disabled"
+			button.IsDisabled = true
 
-					button = new Control.Button(vlayout);
-					button.Margin = Margin.Five;
-					button.Padding = Padding.Three;
-					button.Text = "Disabled";
-					button.IsDisabled = true;
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Text = "With Tooltip"
+			button.ToolTipText = "This is tooltip"
 
-					button = new Control.Button(vlayout);
-					button.Margin = Margin.Five;
-					button.Padding = Padding.Three;
-					button.Text = "With Tooltip";
-					button.SetToolTipText("This is tooltip");
+			button = Gwen.Button.Create(vlayout)
+			button.Margin = Gwen.Margin.Five
+			button.Padding = Gwen.Padding.Three
+			button.Text = "Autosized"
+			button.HorizontalAlignment = Gwen.HorizontalAlignment.Left
 
-					button = new Control.Button(vlayout);
-					button.Margin = Margin.Five;
-					button.Padding = Padding.Three;
-					button.Text = "Autosized";
-					button.HorizontalAlignment = HorizontalAlignment.Left;
-				}
+		button = Gwen.Button.Create(hlayout)
+		button.Margin = Gwen.Margin.Five
+		button.Padding = Gwen.Padding.Three
+		button.Text = "Event tester"
+		button.Size = Gwen.Size.Create(300, 200);
+		button.Pressed.add(function(sender, e) ItemPrint("Button: Pressed") end)
+		button.Clicked.add(function(sender, e) ItemPrint("Button: Clicked") end)
+		button.Released.add(function(sender, e) ItemPrint("Button: Released") end)
 
-				{
-					Control.Button button = new Control.Button(hlayout);
-					button.Margin = Margin.Five;
-					button.Padding = Padding.Three;
-					button.Text = "Event tester";
-					button.Size = new Size(300, 200);
-					button.Pressed += onButtonAp;
-					button.Clicked += onButtonAc;
-					button.Released += onButtonAr;
-				}
-			}
---]]
-
-
-
-
-
-
-
-
-
-
-
-
-AddItem("Standard", "Button", hlayout)
+AddItem("Standard", "Button", this)

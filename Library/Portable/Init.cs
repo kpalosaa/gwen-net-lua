@@ -41,6 +41,9 @@ namespace GwenNetLua
 			UserData.RegisterType<Gwen.Control.MessageBoxButtons>();
 			gwen["MessageBoxButtons"] = UserData.CreateStatic<Gwen.Control.MessageBoxButtons>();
 
+			UserData.RegisterType<System.Text.RegularExpressions.RegexOptions>();
+			gwen["RegexOptions"] = UserData.CreateStatic<System.Text.RegularExpressions.RegexOptions>();
+
 			// Register event args
 
 			UserData.RegisterType<EventArgs>();
