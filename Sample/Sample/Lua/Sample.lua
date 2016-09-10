@@ -26,13 +26,6 @@ function AddItem(category, name, item)
 
 end
 
-function ItemPrint(text)
-
-	textOutput.AddRow(text)
-	textOutput.ScrollToBottom()
-
-end
-
 local function OnDebugOutlinesChanged(sender, e)
 
 	itemArea.DrawDebugOutlines = debugOutlines.IsChecked
@@ -99,3 +92,5 @@ uiScaleLabel.Alignment = Gwen.Alignment.Left and Gwen.Alignment.CenterV
 uiScaleLabel.Text = "Scale:"
 
 lastItem = nil
+
+return textOutput

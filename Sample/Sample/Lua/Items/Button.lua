@@ -96,9 +96,9 @@ this = Gwen.DockLayout.Create(Gwen.Canvas)
 			button.Padding = Gwen.Padding.Create(20, 20, 20, 20)
 			button.Text = "Toggle me"
 			button.IsToggle = true
-			button.Toggled.add(function(sender, e) ItemPrint("Button: Toggled") end)
-			button.ToggledOn.add(function(sender, e) ItemPrint("Button: ToggledOn") end)
-			button.ToggledOff.add(function(sender, e) ItemPrint("Button: ToggledOff") end)
+			button.Toggled.add(function(sender, e) print("Button: Toggled") end)
+			button.ToggledOn.add(function(sender, e) print("Button: ToggledOn") end)
+			button.ToggledOff.add(function(sender, e) print("Button: ToggledOff") end)
 
 			button = Gwen.Button.Create(vlayout)
 			button.Margin = Gwen.Margin.Five
@@ -123,8 +123,8 @@ this = Gwen.DockLayout.Create(Gwen.Canvas)
 		button.Padding = Gwen.Padding.Three
 		button.Text = "Event tester"
 		button.Size = Gwen.Size.Create(300, 200);
-		button.Pressed.add(function(sender, e) ItemPrint("Button: Pressed") end)
-		button.Clicked.add(function(sender, e) ItemPrint("Button: Clicked") end)
-		button.Released.add(function(sender, e) ItemPrint("Button: Released") end)
+		button.Pressed.add(function(sender, e) print("Button: Pressed") end)
+		button.Clicked.add(function(sender, e) print("Button: Clicked") end)
+		button.Released.add(function(sender, e) print("Button: Released") end)
 
 AddItem("Standard", "Button", this)

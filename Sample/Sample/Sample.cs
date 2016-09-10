@@ -12,7 +12,6 @@ namespace GwenNetLua.Sample
 		public Sample(Gwen.Control.Canvas canvas)
 		{
 			script = new Script(CoreModules.Preset_SoftSandbox);
-			script.Options.DebugPrint = t => System.Diagnostics.Debug.WriteLine(t);
 
 			GwenNetLua.Lua.Init(script, canvas);
 		}
@@ -25,7 +24,13 @@ namespace GwenNetLua.Sample
 			{
 				try
 				{
-					script.DoStream(stream);
+					DynValue result = script.DoStream(stream);
+					if (result.Type == DataType.UserData)
+					{
+						Control.ListBox textOutput = result.UserData.Object as Control.ListBox;
+						if (textOutput != null)
+							script.Options.DebugPrint = t => { textOutput.AddRow(t); textOutput.ScrollToBottom(); };
+					}
 				}
 				catch (ScriptRuntimeException ex)
 				{
@@ -36,7 +41,7 @@ namespace GwenNetLua.Sample
 					throw new Exception(String.Format("Syntax error in '{0}': {1}", "GwenNetLua.Sample.Lua.Sample.lua", ex.DecoratedMessage), ex);
 				}
 			}
-
+			
 			foreach (var res in assembly.GetManifestResourceNames())
 			{
 				if (res != "GwenNetLua.Sample.Lua.Sample.lua" && res.Contains(".lua"))

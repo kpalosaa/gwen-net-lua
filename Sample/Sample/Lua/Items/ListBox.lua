@@ -1,13 +1,13 @@
 ﻿
 local function RowSelected(sender, e)
 
-	ItemPrint(string.format("ListBox: RowSelected: %s", e.SelectedItem.Text))
+	print(string.format("ListBox: RowSelected: %s", e.SelectedItem.Text))
 
 end
 
 local function RowUnSelected(sender, e)
 
-	ItemPrint(string.format("ListBox: RowUnselected: %s", e.SelectedItem.Text))
+	print(string.format("ListBox: RowUnselected: %s", e.SelectedItem.Text))
 
 end
 

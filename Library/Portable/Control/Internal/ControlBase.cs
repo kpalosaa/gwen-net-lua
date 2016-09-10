@@ -100,7 +100,7 @@ namespace GwenNetLua.Control.Internal
 
 		public static bool operator ==(ControlBase control1, ControlBase control2)
 		{
-			if (control1 == null || control2 == null)
+			if ((object)control1 == null || (object)control2 == null)
 				return Object.Equals(control1, control2);
 
 			return control1.Equals(control2);
@@ -108,7 +108,7 @@ namespace GwenNetLua.Control.Internal
 
 		public static bool operator !=(ControlBase control1, ControlBase control2)
 		{
-			if (control1 == null || control2 == null)
+			if ((object)control1 == null || (object)control2 == null)
 				return !Object.Equals(control1, control2);
 
 			return !(control1.Equals(control2));
