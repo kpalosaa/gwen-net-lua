@@ -25,10 +25,9 @@ namespace GwenNetLua.Control
 		{
 		}
 
-		public virtual CollapsibleCategory Add(string categoryName, string name = null, object userData = null) { return new CollapsibleCategory(GetTarget<Gwen.Control.CollapsibleList>().Add(categoryName, name, userData)); }
+		public CollapsibleCategory Add(string categoryName, string name = null, object userData = null) { return new CollapsibleCategory(GetTarget<Gwen.Control.CollapsibleList>().Add(categoryName, name, userData)); }
 		public Button GetSelectedButton() { return Button.Create(GetTarget<Gwen.Control.CollapsibleList>().GetSelectedButton()); }
-		public virtual void UnselectAll() { GetTarget<Gwen.Control.CollapsibleList>().UnselectAll(); }
-		public virtual CollapsibleCategory FindChildByName(string name) { return CollapsibleCategory.Create(GetTarget<Gwen.Control.CollapsibleList>().FindChildByName(name, false)); }
+		public void UnselectAll() { GetTarget<Gwen.Control.CollapsibleList>().UnselectAll(); }
 
 		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> CategoryCollapsed
 		{

@@ -14,7 +14,7 @@ function AddItem(category, name, item)
 
 	cat = list.FindChildByName(category)
 	if cat == nil then
-		cat = list.Add(category)
+		cat = list.Add(category, category)
 	end
 
 	button = cat.Add(name)

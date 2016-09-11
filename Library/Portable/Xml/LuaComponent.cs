@@ -7,6 +7,7 @@ namespace GwenNetLua.Xml
 	{
 		private Script script;
 		private DynValue self;
+		private DynValue onCreated;
 
 		static LuaComponent()
 		{
@@ -16,19 +17,41 @@ namespace GwenNetLua.Xml
 			});
 		}
 
-		public static void RegisterComponent(string name, Gwen.Xml.IXmlSource xmlSource, Script script)
+		public static void RegisterComponent(string name, DynValue constructor, Gwen.Xml.IXmlSource xmlSource, Script script)
 		{
-			Gwen.Xml.Component.Register<LuaComponent>(name, name, xmlSource, script);
+			if (!Gwen.Xml.Component.Register<LuaComponent>(name, constructor, xmlSource, script))
+				throw new ScriptRuntimeException("Failed to register component. Name already exists.");
 		}
 
-		public LuaComponent(Gwen.Control.ControlBase parent, string name, Gwen.Xml.IXmlSource xmlSource, Script script)
+		public LuaComponent(Gwen.Control.ControlBase parent, DynValue constructor, Gwen.Xml.IXmlSource xmlSource, Script script)
 			: base(parent, xmlSource)
 		{
 			this.script = script;
 
-			self = script.Call(script.Globals.Get(name), View);
-			if (self.Type != DataType.Table)
-				throw new ScriptRuntimeException("Component must be implemented as a lua table");
+			DynValue result = script.Call(constructor, View);
+
+			switch (result.Type)
+			{
+				case DataType.Table:
+					self = result;
+					break;
+				case DataType.Tuple:
+					if (result.Tuple.Length >= 1)
+						self = result.Tuple[0];
+					if (result.Tuple.Length >= 2)
+						if (result.Tuple[1].Type == DataType.Function)
+							onCreated = result.Tuple[1];
+					break;
+			}
+
+			if (self == null)
+				throw new ScriptRuntimeException("Component must be implemented as a lua table.");
+		}
+
+		protected override void OnCreated()
+		{
+			if (onCreated != null)
+				script.Call(onCreated, View);
 		}
 
 		public override bool GetValue(string name, out object value)
@@ -100,7 +123,10 @@ namespace GwenNetLua.Xml
 			if (func == null)
 				return false;
 
-			script.Call(func, sender, args);
+			if (args is LuaEventArgs)
+				script.Call(func, sender, ((LuaEventArgs)args).Parameters);
+			else
+				script.Call(func, sender, args);
 
 			return true;
 		}

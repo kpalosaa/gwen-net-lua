@@ -17,12 +17,7 @@ namespace GwenNetLua.Control
 		{
 			get
 			{
-				if (eventArgs.SelectedItem is Gwen.Control.ListBoxRow)
-				{
-					return new ListBoxRow(eventArgs.SelectedItem as Gwen.Control.ListBoxRow);
-				}
-
-				return null;
+				return eventArgs.SelectedItem;
 			}
 		}
 

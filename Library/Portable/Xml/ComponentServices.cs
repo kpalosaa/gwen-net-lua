@@ -13,14 +13,20 @@ namespace GwenNetLua.Xml
 			this.script = script;
 		}
 
-		public void Register(string name, string xml)
+		public void Register(string name, DynValue constructor, string xml)
 		{
-			LuaComponent.RegisterComponent(name, new Gwen.Xml.XmlStringSource(xml), script);
+			if (xml.TrimStart()[0] == '<')
+				LuaComponent.RegisterComponent(name, constructor, new Gwen.Xml.XmlStringSource(xml), script);
+			else
+				LuaComponent.RegisterComponent(name, constructor, new Gwen.Xml.XmlFileSource(xml), script);
 		}
 
 		public DynValue Create(string name, Control.Internal.ControlBase parent)
 		{
 			LuaComponent component = Gwen.Xml.Component.Create(name, parent.Target) as LuaComponent;
+			if (component == null)
+				throw new ScriptRuntimeException("Component '{0}' failed to create", name);
+
 			return component.Self;
 		}
 

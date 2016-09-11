@@ -150,6 +150,9 @@ namespace GwenNetLua
 			UserData.RegisterProxyType<GwenNetLua.Control.LabeledCheckBox, Gwen.Control.LabeledCheckBox>(r => new GwenNetLua.Control.LabeledCheckBox(r));
 			gwen["LabeledCheckBox"] = typeof(GwenNetLua.Control.LabeledCheckBox);
 
+			UserData.RegisterProxyType<GwenNetLua.Control.LabeledRadioButton, Gwen.Control.LabeledRadioButton>(r => new GwenNetLua.Control.LabeledRadioButton(r));
+			gwen["LabeledRadioButton"] = typeof(GwenNetLua.Control.LabeledRadioButton);
+
 			UserData.RegisterProxyType<GwenNetLua.Control.ListBox, Gwen.Control.ListBox>(r => new GwenNetLua.Control.ListBox(r));
 			gwen["ListBox"] = typeof(GwenNetLua.Control.ListBox);
 
@@ -179,6 +182,9 @@ namespace GwenNetLua
 
 			UserData.RegisterProxyType<GwenNetLua.Control.ProgressBar, Gwen.Control.ProgressBar>(r => new GwenNetLua.Control.ProgressBar(r));
 			gwen["ProgressBar"] = typeof(GwenNetLua.Control.ProgressBar);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.RadioButton, Gwen.Control.RadioButton>(r => new GwenNetLua.Control.RadioButton(r));
+			gwen["RadioButton"] = typeof(GwenNetLua.Control.RadioButton);
 
 			UserData.RegisterProxyType<GwenNetLua.Control.RadioButtonGroup, Gwen.Control.RadioButtonGroup>(r => new GwenNetLua.Control.RadioButtonGroup(r));
 			gwen["RadioButtonGroup"] = typeof(GwenNetLua.Control.RadioButtonGroup);

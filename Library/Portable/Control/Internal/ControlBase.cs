@@ -75,6 +75,7 @@ namespace GwenNetLua.Control.Internal
 		public void Focus() { target.Focus(); }
 		public void SendToBack() { target.SendToBack(); }
 		public void Touch() { target.Touch(); }
+		public Gwen.Control.ControlBase FindChildByName(string name, bool recursive = false) { return target.FindChildByName(name, recursive); }
 
 		public bool Equals(ControlBase other)
 		{

@@ -59,6 +59,7 @@
     <Compile Include="Control\Internal\ComboBoxBase.cs" />
     <Compile Include="Control\Internal\ControlBase.cs" />
     <Compile Include="Control\Internal\InnerContentControl.cs" />
+    <Compile Include="Control\LabeledRadioButton.cs" />
     <Compile Include="Control\Internal\ResizableControl.cs" />
     <Compile Include="Control\Internal\Slider.cs" />
     <Compile Include="Control\Internal\WindowBase.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Control\NumericUpDown.cs" />
     <Compile Include="Control\Popup.cs" />
     <Compile Include="Control\ProgressBar.cs" />
+    <Compile Include="Control\RadioButton.cs" />
     <Compile Include="Control\RadioButtonGroup.cs" />
     <Compile Include="Control\ScrollControl.cs" />
     <Compile Include="Control\StackLayout.cs" />

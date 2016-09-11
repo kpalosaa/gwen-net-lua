@@ -51,6 +51,8 @@
     <EmbeddedResource Include="Lua\Items\Button.lua" />
     <EmbeddedResource Include="Lua\Items\Label.lua" />
     <EmbeddedResource Include="Lua\Items\ListBox.lua" />
+    <EmbeddedResource Include="Lua\Items\XmlComponent.lua" />
+    <EmbeddedResource Include="Lua\Items\XmlWindow.lua" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +66,9 @@
     <EmbeddedResource Include="Images\Skins\DefaultSkin.png" />
     <EmbeddedResource Include="Images\Skins\Transparent.png" />
     <EmbeddedResource Include="Images\test16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Xml\Window.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
