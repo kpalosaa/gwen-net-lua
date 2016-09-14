@@ -20,6 +20,9 @@ namespace GwenNetLua
 			return new Font(faceName, size, style);
 		}
 
+		public string FaceName { get { return target.FaceName; } }
+		public int Size { get { return target.Size; } }
+
 		[MoonSharpHidden]
 		public Font(string faceName, int size = 10, Gwen.FontStyle style = Gwen.FontStyle.Normal)
 		{

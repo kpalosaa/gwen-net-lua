@@ -44,13 +44,16 @@ namespace GwenNetLua
 			UserData.RegisterType<System.Text.RegularExpressions.RegexOptions>();
 			gwen["RegexOptions"] = UserData.CreateStatic<System.Text.RegularExpressions.RegexOptions>();
 
+			UserData.RegisterType<Gwen.FontStyle>();
+			gwen["FontStyle"] = UserData.CreateStatic<Gwen.FontStyle>();
+
 			// Register event args
 
 			UserData.RegisterType<EventArgs>();
-			UserData.RegisterType<Gwen.Control.ClickedEventArgs>();
-			UserData.RegisterType<Gwen.Control.LinkClickedEventArgs>();
 			UserData.RegisterType<Gwen.Control.MessageBoxResultEventArgs>();
 
+			UserData.RegisterProxyType<GwenNetLua.Control.LinkClickedEventArgs, Gwen.Control.LinkClickedEventArgs>(r => new GwenNetLua.Control.LinkClickedEventArgs(r));
+			UserData.RegisterProxyType<GwenNetLua.Control.ClickedEventArgs, Gwen.Control.ClickedEventArgs>(r => new GwenNetLua.Control.ClickedEventArgs(r));
 			UserData.RegisterProxyType<GwenNetLua.Control.ItemSelectedEventArgs, Gwen.Control.ItemSelectedEventArgs>(r => new GwenNetLua.Control.ItemSelectedEventArgs(r));
 
 			// Register structs
@@ -152,6 +155,9 @@ namespace GwenNetLua
 
 			UserData.RegisterProxyType<GwenNetLua.Control.LabeledRadioButton, Gwen.Control.LabeledRadioButton>(r => new GwenNetLua.Control.LabeledRadioButton(r));
 			gwen["LabeledRadioButton"] = typeof(GwenNetLua.Control.LabeledRadioButton);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.LinkLabel, Gwen.Control.LinkLabel>(r => new GwenNetLua.Control.LinkLabel(r));
+			gwen["LinkLabel"] = typeof(GwenNetLua.Control.LinkLabel);
 
 			UserData.RegisterProxyType<GwenNetLua.Control.ListBox, Gwen.Control.ListBox>(r => new GwenNetLua.Control.ListBox(r));
 			gwen["ListBox"] = typeof(GwenNetLua.Control.ListBox);

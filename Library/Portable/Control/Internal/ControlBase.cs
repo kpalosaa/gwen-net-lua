@@ -32,6 +32,8 @@ namespace GwenNetLua.Control.Internal
 
 		public ControlBase Parent { set { target.Parent = value.Target; } }
 
+		public Font DefaultFont { get { return new Font(target.Skin.DefaultFont); } }
+
 		public Gwen.Dock Dock { get { return target.Dock; } set { target.Dock = value; } }
 		public Gwen.HorizontalAlignment HorizontalAlignment { get { return target.HorizontalAlignment; } set { target.HorizontalAlignment = value; } }
 		public Gwen.VerticalAlignment VerticalAlignment { get { return target.VerticalAlignment; } set { target.VerticalAlignment = value; } }

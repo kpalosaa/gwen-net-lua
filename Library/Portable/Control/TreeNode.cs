@@ -33,6 +33,7 @@ namespace GwenNetLua.Control
 		public IEnumerable SelectedChildren { get { return GetTarget<Gwen.Control.TreeNode>().SelectedChildren; } }
 		public string Text { get { return GetTarget<Gwen.Control.TreeNode>().Text; } set { GetTarget<Gwen.Control.TreeNode>().Text = value; } }
 		public TreeControl TreeControl { get { return TreeControl.Create(GetTarget<Gwen.Control.TreeNode>().TreeControl); } }
+		public string ImageName { get { return GetTarget<Gwen.Control.TreeNode>().ImageName; } set { GetTarget<Gwen.Control.TreeNode>().ImageName = value; } }
 
 		public TreeNode AddNode(string label, string name = null, object userData = null) { return TreeNode.Create(GetTarget<Gwen.Control.TreeNode>().AddNode(label, name, userData)); }
 		public void Close() { GetTarget<Gwen.Control.TreeNode>().Close(); }
@@ -43,7 +44,6 @@ namespace GwenNetLua.Control
 		public void Open() { GetTarget<Gwen.Control.TreeNode>().Open(); }
 		public void RemoveAllNodes() { GetTarget<Gwen.Control.TreeNode>().RemoveAllNodes(); }
 		public void RemoveNode(TreeNode node) { GetTarget<Gwen.Control.TreeNode>().RemoveNode(node.GetTarget<Gwen.Control.TreeNode>()); }
-		public void SetImage(string textureName) { GetTarget<Gwen.Control.TreeNode>().SetImage(textureName); }
 		public void UnselectAll() { GetTarget<Gwen.Control.TreeNode>().UnselectAll(); }
 
 		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> Clicked

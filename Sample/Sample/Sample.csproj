@@ -53,6 +53,9 @@
     <EmbeddedResource Include="Lua\Items\ListBox.lua" />
     <EmbeddedResource Include="Lua\Items\XmlComponent.lua" />
     <EmbeddedResource Include="Lua\Items\XmlWindow.lua" />
+    <EmbeddedResource Include="Lua\Items\TreeControl.lua" />
+    <EmbeddedResource Include="Lua\Items\LinkLabel.lua" />
+    <EmbeddedResource Include="Lua\Items\TextBox.lua" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
