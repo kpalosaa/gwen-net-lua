@@ -38,8 +38,8 @@ namespace GwenNetLua
 			UserData.RegisterType<Gwen.Control.MessageBoxButtons>();
 			gwen["MessageBoxButtons"] = UserData.CreateStatic<Gwen.Control.MessageBoxButtons>();
 
-			UserData.RegisterType<Gwen.Control.MessageBoxButtons>();
-			gwen["MessageBoxButtons"] = UserData.CreateStatic<Gwen.Control.MessageBoxButtons>();
+			UserData.RegisterType<Gwen.Control.MessageBoxResult>();
+			gwen["MessageBoxResult"] = UserData.CreateStatic<Gwen.Control.MessageBoxResult>();
 
 			UserData.RegisterType<System.Text.RegularExpressions.RegexOptions>();
 			gwen["RegexOptions"] = UserData.CreateStatic<System.Text.RegularExpressions.RegexOptions>();
@@ -50,8 +50,7 @@ namespace GwenNetLua
 			// Register event args
 
 			UserData.RegisterType<EventArgs>();
-			UserData.RegisterType<Gwen.Control.MessageBoxResultEventArgs>();
-
+			UserData.RegisterProxyType<GwenNetLua.Control.MessageBoxResultEventArgs, Gwen.Control.MessageBoxResultEventArgs>(r => new GwenNetLua.Control.MessageBoxResultEventArgs(r));
 			UserData.RegisterProxyType<GwenNetLua.Control.LinkClickedEventArgs, Gwen.Control.LinkClickedEventArgs>(r => new GwenNetLua.Control.LinkClickedEventArgs(r));
 			UserData.RegisterProxyType<GwenNetLua.Control.ClickedEventArgs, Gwen.Control.ClickedEventArgs>(r => new GwenNetLua.Control.ClickedEventArgs(r));
 			UserData.RegisterProxyType<GwenNetLua.Control.ItemSelectedEventArgs, Gwen.Control.ItemSelectedEventArgs>(r => new GwenNetLua.Control.ItemSelectedEventArgs(r));
@@ -82,6 +81,15 @@ namespace GwenNetLua
 			UserData.RegisterType<GwenNetLua.Anchor>();
 			gwen["Anchor"] = typeof(GwenNetLua.Anchor);
 
+			UserData.RegisterType<GwenNetLua.Document>();
+			gwen["Document"] = typeof(GwenNetLua.Document);
+
+			UserData.RegisterType<GwenNetLua.Paragraph>();
+			gwen["Paragraph"] = typeof(GwenNetLua.Paragraph);
+
+			UserData.RegisterType<GwenNetLua.ImageParagraph>();
+			gwen["ImageParagraph"] = typeof(GwenNetLua.ImageParagraph);
+			
 			// Register canvas
 
 			UserData.RegisterProxyType<GwenNetLua.Control.Canvas, Gwen.Control.Canvas>(r => new GwenNetLua.Control.Canvas(r));
@@ -194,6 +202,9 @@ namespace GwenNetLua
 
 			UserData.RegisterProxyType<GwenNetLua.Control.RadioButtonGroup, Gwen.Control.RadioButtonGroup>(r => new GwenNetLua.Control.RadioButtonGroup(r));
 			gwen["RadioButtonGroup"] = typeof(GwenNetLua.Control.RadioButtonGroup);
+
+			UserData.RegisterProxyType<GwenNetLua.Control.RichLabel, Gwen.Control.RichLabel>(r => new GwenNetLua.Control.RichLabel(r));
+			gwen["RichLabel"] = typeof(GwenNetLua.Control.RichLabel);
 
 			UserData.RegisterProxyType<GwenNetLua.Control.ScrollControl, Gwen.Control.ScrollControl>(r => new GwenNetLua.Control.ScrollControl(r));
 			gwen["ScrollControl"] = typeof(GwenNetLua.Control.ScrollControl);

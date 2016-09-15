@@ -34,6 +34,7 @@ namespace GwenNetLua.Control
 		public int VerticalScroll { get { return GetTarget<Gwen.Control.ScrollControl>().VerticalScroll; } set { GetTarget<Gwen.Control.ScrollControl>().VerticalScroll = value; } }
 		public Size ViewableContentSize { get { return new Size(GetTarget<Gwen.Control.ScrollControl>().ViewableContentSize); } }
 
+		public void EnableScroll(bool horizontal, bool vertical) { GetTarget<Gwen.Control.ScrollControl>().EnableScroll(horizontal, vertical); }
 		public void EnsureVisible(Rectangle rect) { GetTarget<Gwen.Control.ScrollControl>().EnsureVisible(rect.Target); }
 		public void EnsureVisible(Rectangle rect, Size minChange) { GetTarget<Gwen.Control.ScrollControl>().EnsureVisible(rect.Target, minChange.Target); }
 		public void ScrollToBottom() { GetTarget<Gwen.Control.ScrollControl>().ScrollToBottom(); }

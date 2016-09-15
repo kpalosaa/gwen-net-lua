@@ -64,6 +64,7 @@
     <Compile Include="Control\Internal\Slider.cs" />
     <Compile Include="Control\Internal\WindowBase.cs" />
     <Compile Include="Control\LinkLabel.cs" />
+    <Compile Include="Control\RichLabel.cs" />
     <Compile Include="EventArgs\ClickedEventArgs.cs" />
     <Compile Include="EventArgs\ItemSelectedEventArgs.cs" />
     <Compile Include="Control\Label.cs" />
@@ -97,8 +98,12 @@
     <Compile Include="Control\VerticalSplitter.cs" />
     <Compile Include="Control\Window.cs" />
     <Compile Include="EventArgs\LinkClickedEventArgs.cs" />
+    <Compile Include="EventArgs\MessageBoxResultEventArgs.cs" />
     <Compile Include="Font.cs" />
     <Compile Include="Init.cs" />
+    <Compile Include="RichText\Document.cs" />
+    <Compile Include="RichText\ImageParagraph.cs" />
+    <Compile Include="RichText\Paragraph.cs" />
     <Compile Include="Xml\ComponentServices.cs" />
     <Compile Include="Xml\LuaComponent.cs" />
     <Compile Include="Margin.cs" />

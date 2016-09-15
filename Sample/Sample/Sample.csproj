@@ -56,6 +56,8 @@
     <EmbeddedResource Include="Lua\Items\TreeControl.lua" />
     <EmbeddedResource Include="Lua\Items\LinkLabel.lua" />
     <EmbeddedResource Include="Lua\Items\TextBox.lua" />
+    <EmbeddedResource Include="Lua\Items\RichLabel.lua" />
+    <EmbeddedResource Include="Lua\Items\Docking.lua" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

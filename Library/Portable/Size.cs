@@ -10,6 +10,9 @@ namespace GwenNetLua
 			return new Size(width, height);
 		}
 
+		public const int Ignore = Gwen.Util.Ignore;
+		public const int Infinity = Gwen.Util.Infinity;
+
 		[MoonSharpHidden]
 		public Size(int width, int height)
 		{

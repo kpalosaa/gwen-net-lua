@@ -25,6 +25,7 @@ namespace GwenNetLua.Control
 		{
 		}
 
+		public LabeledRadioButton Selected { get { return new LabeledRadioButton(GetTarget<Gwen.Control.RadioButtonGroup>().Selected); } }
 		public int SelectedIndex { get { return GetTarget<Gwen.Control.RadioButtonGroup>().SelectedIndex; } }
 		public string SelectedLabel { get { return GetTarget<Gwen.Control.RadioButtonGroup>().SelectedLabel; } }
 		public string SelectedName { get { return GetTarget<Gwen.Control.RadioButtonGroup>().SelectedName; } }
