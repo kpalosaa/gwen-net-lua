@@ -16,5 +16,6 @@ namespace GwenNetLua.Control
 		public bool MouseDown { get { return eventArgs.MouseDown; } }
 		public int X { get { return eventArgs.X; } }
 		public int Y { get { return eventArgs.Y; } }
+		public Point Position { get { return new Point(eventArgs.X, eventArgs.Y); } }
 	}
 }

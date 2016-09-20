@@ -11,9 +11,11 @@ namespace GwenNetLua.Control.Internal
 		{
 		}
 
+		public MenuItem SelectedItem { get { return new MenuItem(GetTarget<Gwen.Control.Internal.ComboBoxBase>().SelectedItem); } set { GetTarget<Gwen.Control.Internal.ComboBoxBase>().SelectedItem = value.GetTarget<Gwen.Control.MenuItem>(); } }
 		public int SelectedIndex { get { return GetTarget<Gwen.Control.Internal.ComboBoxBase>().SelectedIndex; } set { GetTarget<Gwen.Control.Internal.ComboBoxBase>().SelectedIndex = value; } }
 
-		public void AddItem(string label, string name = null, object userData = null) { GetTarget<Gwen.Control.Internal.ComboBoxBase>().AddItem(label, name, userData); }
+		public void AddItem(MenuItem item) { GetTarget<Gwen.Control.Internal.ComboBoxBase>().AddItem(item.GetTarget<Gwen.Control.MenuItem>()); }
+		public MenuItem AddItem(string label, string name = null, object userData = null) { return new MenuItem(GetTarget<Gwen.Control.Internal.ComboBoxBase>().AddItem(label, name, userData)); }
 		public void Close() { GetTarget<Gwen.Control.Internal.ComboBoxBase>().Close(); }
 		public void Open() { GetTarget<Gwen.Control.Internal.ComboBoxBase>().Open(); }
 		public void RemoveAll() { GetTarget<Gwen.Control.Internal.ComboBoxBase>().RemoveAll(); }

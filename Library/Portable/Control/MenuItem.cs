@@ -33,8 +33,10 @@ namespace GwenNetLua.Control
 
 		public void CloseMenu() { GetTarget<Gwen.Control.MenuItem>().CloseMenu(); }
 		public void OpenMenu() { GetTarget<Gwen.Control.MenuItem>().OpenMenu(); }
-		public void SetAction(Gwen.Control.ControlBase.GwenEventHandler<EventArgs> handler) { GetTarget<Gwen.Control.MenuItem>().SetAction(handler); }
 		public void ToggleMenu() { GetTarget<Gwen.Control.MenuItem>().ToggleMenu(); }
+
+		public void AddItem(MenuItem item) { GetTarget<Gwen.Control.MenuItem>().AddItem(item.GetTarget<Gwen.Control.MenuItem>()); }
+		public MenuItem AddItem(string text, string iconName, string accelerator = null) { return MenuItem.Create(GetTarget<Gwen.Control.MenuItem>().AddItem(text, iconName, accelerator)); }
 
 		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> CheckChanged
 		{
@@ -46,7 +48,7 @@ namespace GwenNetLua.Control
 			add { GetTarget<Gwen.Control.MenuItem>().Checked += value; }
 			remove { GetTarget<Gwen.Control.MenuItem>().Checked -= value; }
 		}
-		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ItemSelectedEventArgs> Selected
+		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> Selected
 		{
 			add { GetTarget<Gwen.Control.MenuItem>().Selected += value; }
 			remove { GetTarget<Gwen.Control.MenuItem>().Selected -= value; }

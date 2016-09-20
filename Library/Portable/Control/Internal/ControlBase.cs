@@ -65,6 +65,8 @@ namespace GwenNetLua.Control.Internal
 
 		public string Type { get { return target.GetType().Name; } }
 
+		public bool ShouldDrawBackground { get { return target.ShouldDrawBackground; } set { target.ShouldDrawBackground = value; } }
+
 		public bool DrawDebugOutlines { get { return target.DrawDebugOutlines; } set { target.DrawDebugOutlines = value; } }
 
 		public void AddAccelerator(string accelerator) { target.AddAccelerator(accelerator); }
@@ -78,6 +80,11 @@ namespace GwenNetLua.Control.Internal
 		public void SendToBack() { target.SendToBack(); }
 		public void Touch() { target.Touch(); }
 		public Gwen.Control.ControlBase FindChildByName(string name, bool recursive = false) { return target.FindChildByName(name, recursive); }
+		public Point CanvasPosToLocal(Point pnt) { return new Point(target.CanvasPosToLocal(pnt.Target)); }
+		public Point LocalPosToCanvas(Point pnt) { return new Point(target.LocalPosToCanvas(pnt.Target)); }
+		public void Show() { target.Show(); }
+		public void Hide() { target.Hide(); }
+		public void Collapse(bool collapsed = true, bool measure = true) { target.Collapse(collapsed, measure); }
 
 		public bool Equals(ControlBase other)
 		{

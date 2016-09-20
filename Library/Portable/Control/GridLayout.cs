@@ -39,7 +39,7 @@ namespace GwenNetLua.Control
 
 		public void SetRowHeights(IEnumerable<float> heights)
 		{
-			GetTarget<Gwen.Control.Layout.GridLayout>().SetColumnWidths(heights.ToArray());
+			GetTarget<Gwen.Control.Layout.GridLayout>().SetRowHeights(heights.ToArray());
 		}
 	}
 }

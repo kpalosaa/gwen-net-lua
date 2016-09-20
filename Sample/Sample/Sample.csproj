@@ -58,6 +58,12 @@
     <EmbeddedResource Include="Lua\Items\TextBox.lua" />
     <EmbeddedResource Include="Lua\Items\RichLabel.lua" />
     <EmbeddedResource Include="Lua\Items\Docking.lua" />
+    <EmbeddedResource Include="Lua\Items\CheckBox.lua" />
+    <EmbeddedResource Include="Lua\Items\Splitter.lua" />
+    <EmbeddedResource Include="Lua\Items\FlowLayout.lua" />
+    <EmbeddedResource Include="Lua\Items\GridLayout.lua" />
+    <EmbeddedResource Include="Lua\Items\GroupBox.lua" />
+    <EmbeddedResource Include="Lua\Items\Menu.lua" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +80,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Xml\Window.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Lua\Items\ComboBox.lua" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
