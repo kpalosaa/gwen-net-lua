@@ -64,6 +64,16 @@
     <EmbeddedResource Include="Lua\Items\GridLayout.lua" />
     <EmbeddedResource Include="Lua\Items\GroupBox.lua" />
     <EmbeddedResource Include="Lua\Items\Menu.lua" />
+    <EmbeddedResource Include="Lua\Items\NumericUpDown.lua" />
+    <EmbeddedResource Include="Lua\Items\ProgressBar.lua" />
+    <EmbeddedResource Include="Lua\Items\RadioButton.lua" />
+    <EmbeddedResource Include="Lua\Items\ScrollControl.lua" />
+    <EmbeddedResource Include="Lua\Items\Slider.lua" />
+    <EmbeddedResource Include="Lua\Items\TabControl.lua" />
+    <EmbeddedResource Include="Lua\Items\AnchorLayout.lua" />
+    <EmbeddedResource Include="Lua\Items\CollapsibleList.lua" />
+    <EmbeddedResource Include="Lua\Items\Window.lua" />
+    <EmbeddedResource Include="Lua\Items\ToolWindow.lua" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

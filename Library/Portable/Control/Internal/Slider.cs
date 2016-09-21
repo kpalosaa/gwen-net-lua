@@ -17,6 +17,8 @@ namespace GwenNetLua.Control.Internal
 		public bool SnapToNotches { get { return GetTarget<Gwen.Control.Internal.Slider>().SnapToNotches; } set { GetTarget<Gwen.Control.Internal.Slider>().SnapToNotches = value; } }
 		public float Value { get { return GetTarget<Gwen.Control.Internal.Slider>().Value; } set { GetTarget<Gwen.Control.Internal.Slider>().Value = value; } }
 
+		public void SetRange(float min, float max) { GetTarget<Gwen.Control.Internal.Slider>().SetRange(min, max); }
+
 		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> ValueChanged
 		{
 			add { GetTarget<Gwen.Control.Internal.Slider>().ValueChanged += value; }

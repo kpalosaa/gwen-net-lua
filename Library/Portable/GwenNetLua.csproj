@@ -59,6 +59,7 @@
     <Compile Include="Control\Internal\ComboBoxBase.cs" />
     <Compile Include="Control\Internal\ControlBase.cs" />
     <Compile Include="Control\Internal\InnerContentControl.cs" />
+    <Compile Include="Control\Internal\TabButton.cs" />
     <Compile Include="Control\LabeledRadioButton.cs" />
     <Compile Include="Control\Internal\ResizableControl.cs" />
     <Compile Include="Control\Internal\Slider.cs" />

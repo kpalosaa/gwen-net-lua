@@ -98,6 +98,7 @@ namespace GwenNetLua
 			// Register non-creatable controls
 
 			UserData.RegisterProxyType<GwenNetLua.Control.Internal.InnerContentControl, Gwen.Control.Internal.InnerContentControl>(r => new GwenNetLua.Control.Internal.InnerContentControl(r));
+			UserData.RegisterProxyType<GwenNetLua.Control.Internal.TabButton, Gwen.Control.Internal.TabButton>(r => new GwenNetLua.Control.Internal.TabButton(r));
 
 			// Register creatable controls
 

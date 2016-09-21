@@ -3,15 +3,15 @@ using MoonSharp.Interpreter;
 
 namespace GwenNetLua.Control
 {
-	public class ProgressBar : Internal.ControlBase
+	public class ProgressBar : Label
 	{
-		public static ProgressBar Create(Internal.ControlBase parent)
+		public static new ProgressBar Create(Internal.ControlBase parent)
 		{
 			return new ProgressBar(new Gwen.Control.ProgressBar(parent.Target));
 		}
 
 		[MoonSharpHidden]
-		public static ProgressBar Create(Gwen.Control.ControlBase control)
+		public static new ProgressBar Create(Gwen.Control.ControlBase control)
 		{
 			if (control == null)
 				return null;

@@ -30,7 +30,7 @@ namespace GwenNetLua.Control.Internal
 
 		public object UserData { get { return target.UserData; } set { target.UserData = value; } }
 
-		public ControlBase Parent { set { target.Parent = value.Target; } }
+		public ControlBase Parent { set { target.Parent = value != null ? value.Target : null; } }
 
 		public Font DefaultFont { get { return new Font(target.Skin.DefaultFont); } }
 

@@ -29,7 +29,7 @@ namespace GwenNetLua.Control
 		public int TabCount { get { return GetTarget<Gwen.Control.TabControl>().TabCount; } }
 		public Gwen.Dock TabStripPosition { get { return GetTarget<Gwen.Control.TabControl>().TabStripPosition; } set { GetTarget<Gwen.Control.TabControl>().TabStripPosition = value; } }
 
-		public void AddPage(string label, Internal.ControlBase page) { GetTarget<Gwen.Control.TabControl>().AddPage(label, page.Target); }
+		public Internal.TabButton AddPage(string label, Internal.ControlBase page) { return new Internal.TabButton(GetTarget<Gwen.Control.TabControl>().AddPage(label, page.Target)); }
 
 		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> TabAdded
 		{

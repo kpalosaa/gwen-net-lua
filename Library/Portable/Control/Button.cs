@@ -37,6 +37,8 @@ namespace GwenNetLua.Control
 		public Size ImageSize { get { return new Size(GetTarget<Gwen.Control.Button>().ImageSize); } set { GetTarget<Gwen.Control.Button>().ImageSize = value.Target; } }
 		public Rectangle ImageTextureRect { get { return new Rectangle(GetTarget<Gwen.Control.Button>().ImageTextureRect); } set { GetTarget<Gwen.Control.Button>().ImageTextureRect = value.Target; } }
 
+		public void SetImage(string imageName, Gwen.Control.ImageAlign imageAlign = Gwen.Control.ImageAlign.LeftSide) { GetTarget<Gwen.Control.Button>().SetImage(imageName, imageAlign); }
+
 		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> Clicked
 		{
 			add { GetTarget<Gwen.Control.Button>().Clicked += value; }

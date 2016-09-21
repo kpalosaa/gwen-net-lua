@@ -30,7 +30,7 @@ namespace GwenNetLua.Control
 		public string SelectedLabel { get { return GetTarget<Gwen.Control.RadioButtonGroup>().SelectedLabel; } }
 		public string SelectedName { get { return GetTarget<Gwen.Control.RadioButtonGroup>().SelectedName; } }
 
-		public void AddOption(string text, string optionName = null, object userData = null) { GetTarget<Gwen.Control.RadioButtonGroup>().AddOption(text, optionName, userData); }
+		public LabeledRadioButton AddOption(string text, string optionName = null, object userData = null) { return new LabeledRadioButton(GetTarget<Gwen.Control.RadioButtonGroup>().AddOption(text, optionName, userData)); }
 		public void SelectByUserData(object userdata) { GetTarget<Gwen.Control.RadioButtonGroup>().SelectByUserData(userdata); }
 		public void SetSelection(int index) { GetTarget<Gwen.Control.RadioButtonGroup>().SetSelection(index); }
 		public void SetSelectionByName(string name) { GetTarget<Gwen.Control.RadioButtonGroup>().SetSelectionByName(name); }
