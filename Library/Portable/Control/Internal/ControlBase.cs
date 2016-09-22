@@ -69,6 +69,15 @@ namespace GwenNetLua.Control.Internal
 
 		public bool DrawDebugOutlines { get { return target.DrawDebugOutlines; } set { target.DrawDebugOutlines = value; } }
 
+		public int ActualBottom { get { return target.ActualBottom; } }
+		public int ActualHeight { get { return target.ActualHeight; } }
+		public int ActualLeft { get { return target.ActualLeft; } }
+		public Point ActualPosition { get { return new Point(target.ActualPosition); } }
+		public int ActualRight { get { return target.ActualRight; } }
+		public Size ActualSize { get { return new Size(target.ActualSize); } }
+		public int ActualTop { get { return target.ActualTop; } }
+		public int ActualWidth { get { return target.ActualWidth; } }
+
 		public void AddAccelerator(string accelerator) { target.AddAccelerator(accelerator); }
 		public void AddAccelerator(string accelerator, Gwen.Control.ControlBase.GwenEventHandler<EventArgs> handler) { target.AddAccelerator(accelerator, handler); }
 		public void Blur() { target.Blur(); }
@@ -85,6 +94,42 @@ namespace GwenNetLua.Control.Internal
 		public void Show() { target.Show(); }
 		public void Hide() { target.Hide(); }
 		public void Collapse(bool collapsed = true, bool measure = true) { target.Collapse(collapsed, measure); }
+
+		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> BoundsChanged
+		{
+			add { target.BoundsChanged += value; }
+			remove { target.BoundsChanged -= value; }
+		}
+		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> Clicked
+		{
+			add { target.Clicked += value; }
+			remove { target.Clicked -= value; }
+		}
+		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> DoubleClicked
+		{
+			add { target.DoubleClicked += value; }
+			remove { target.DoubleClicked -= value; }
+		}
+		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> DoubleRightClicked
+		{
+			add { target.DoubleRightClicked += value; }
+			remove { target.DoubleRightClicked -= value; }
+		}
+		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> HoverEnter
+		{
+			add { target.HoverEnter += value; }
+			remove { target.HoverEnter -= value; }
+		}
+		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> HoverLeave
+		{
+			add { target.HoverLeave += value; }
+			remove { target.HoverLeave -= value; }
+		}
+		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> RightClicked
+		{
+			add { target.RightClicked += value; }
+			remove { target.RightClicked -= value; }
+		}
 
 		public bool Equals(ControlBase other)
 		{

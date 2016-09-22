@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GwenNetLua.Sample</RootNamespace>
-    <AssemblyName>Sample</AssemblyName>
+    <AssemblyName>GwenNetLua.Sample</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -74,6 +74,9 @@
     <EmbeddedResource Include="Lua\Items\CollapsibleList.lua" />
     <EmbeddedResource Include="Lua\Items\Window.lua" />
     <EmbeddedResource Include="Lua\Items\ToolWindow.lua" />
+    <EmbeddedResource Include="Lua\Items\ImagePanel.lua" />
+    <EmbeddedResource Include="Lua\Items\StatusBar.lua" />
+    <EmbeddedResource Include="Lua\Items\ColorPicker.lua" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

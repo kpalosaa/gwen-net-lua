@@ -53,6 +53,7 @@
     <Compile Include="Control\HorizontalLayout.cs" />
     <Compile Include="Control\HorizontalSlider.cs" />
     <Compile Include="Control\HorizontalSplitter.cs" />
+    <Compile Include="Control\HSVColorPicker.cs" />
     <Compile Include="Control\ImagePanel.cs" />
     <Compile Include="Control\Internal\ButtonBase.cs" />
     <Compile Include="Control\Canvas.cs" />

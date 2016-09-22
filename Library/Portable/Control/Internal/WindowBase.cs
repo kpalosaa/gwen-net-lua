@@ -17,7 +17,6 @@ namespace GwenNetLua.Control.Internal
 		public Gwen.Control.StartPosition StartPosition { get { return GetTarget<Gwen.Control.Internal.WindowBase>().StartPosition; } set { GetTarget<Gwen.Control.Internal.WindowBase>().StartPosition = value; } }
 
 		public void Close() { GetTarget<Gwen.Control.Internal.WindowBase>().Close(); }
-		public void Show() { GetTarget<Gwen.Control.Internal.WindowBase>().Show(); }
 		public new void Touch() { GetTarget<Gwen.Control.Internal.WindowBase>().Touch(); }
 
 		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> Closed

@@ -33,26 +33,5 @@ namespace GwenNetLua.Control
 		public Color TextColor { get { return new Color(GetTarget<Gwen.Control.Label>().TextColor); } set { GetTarget<Gwen.Control.Label>().TextColor = value.Target; } }
 		public Color TextColorOverride { get { return new Color(GetTarget<Gwen.Control.Label>().TextColorOverride); } set { GetTarget<Gwen.Control.Label>().TextColorOverride = value.Target; } }
 		public Padding TextPadding { get { return new Padding(GetTarget<Gwen.Control.Label>().TextPadding); } set { GetTarget<Gwen.Control.Label>().TextPadding = value.Target; } }
-
-		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> Clicked
-		{
-			add { GetTarget<Gwen.Control.Label>().Clicked += value; }
-			remove { GetTarget<Gwen.Control.Label>().Clicked -= value; }
-		}
-		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> DoubleClicked
-		{
-			add { GetTarget<Gwen.Control.Label>().DoubleClicked += value; }
-			remove { GetTarget<Gwen.Control.Label>().DoubleClicked -= value; }
-		}
-		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> DoubleRightClicked
-		{
-			add { GetTarget<Gwen.Control.Label>().DoubleRightClicked += value; }
-			remove { GetTarget<Gwen.Control.Label>().DoubleRightClicked -= value; }
-		}
-		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> RightClicked
-		{
-			add { GetTarget<Gwen.Control.Label>().RightClicked += value; }
-			remove { GetTarget<Gwen.Control.Label>().RightClicked -= value; }
-		}
 	}
 }

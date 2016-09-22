@@ -7,8 +7,8 @@
     <ProjectGuid>{CFAEFF76-9BF5-4C5B-AB90-7CE5C62D9DE5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GwenNetLua.Desktop</RootNamespace>
-    <AssemblyName>GwenNetLua.Desktop</AssemblyName>
+    <RootNamespace>GwenNetLua.Sample.Desktop.OpenTK</RootNamespace>
+    <AssemblyName>GwenNetLua.Desktop.OpenTK</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

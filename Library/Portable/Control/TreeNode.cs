@@ -46,25 +46,10 @@ namespace GwenNetLua.Control
 		public void RemoveNode(TreeNode node) { GetTarget<Gwen.Control.TreeNode>().RemoveNode(node.GetTarget<Gwen.Control.TreeNode>()); }
 		public void UnselectAll() { GetTarget<Gwen.Control.TreeNode>().UnselectAll(); }
 
-		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> Clicked
-		{
-			add { GetTarget<Gwen.Control.TreeNode>().Clicked += value; }
-			remove { GetTarget<Gwen.Control.TreeNode>().Clicked -= value; }
-		}
 		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> Collapsed
 		{
 			add { GetTarget<Gwen.Control.TreeNode>().Collapsed += value; }
 			remove { GetTarget<Gwen.Control.TreeNode>().Collapsed -= value; }
-		}
-		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> DoubleClicked
-		{
-			add { GetTarget<Gwen.Control.TreeNode>().DoubleClicked += value; }
-			remove { GetTarget<Gwen.Control.TreeNode>().DoubleClicked -= value; }
-		}
-		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> DoubleRightClicked
-		{
-			add { GetTarget<Gwen.Control.TreeNode>().DoubleRightClicked += value; }
-			remove { GetTarget<Gwen.Control.TreeNode>().DoubleRightClicked -= value; }
 		}
 		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> Expanded
 		{
@@ -80,11 +65,6 @@ namespace GwenNetLua.Control
 		{
 			add { GetTarget<Gwen.Control.TreeNode>().NodeDoubleClicked += value; }
 			remove { GetTarget<Gwen.Control.TreeNode>().NodeDoubleClicked -= value; }
-		}
-		public event Gwen.Control.ControlBase.GwenEventHandler<Gwen.Control.ClickedEventArgs> RightClicked
-		{
-			add { GetTarget<Gwen.Control.TreeNode>().RightClicked += value; }
-			remove { GetTarget<Gwen.Control.TreeNode>().RightClicked -= value; }
 		}
 		public event Gwen.Control.ControlBase.GwenEventHandler<EventArgs> Selected
 		{

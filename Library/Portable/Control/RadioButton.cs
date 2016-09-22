@@ -5,13 +5,13 @@ namespace GwenNetLua.Control
 {
 	public class RadioButton : CheckBox
 	{
-		public static RadioButton Create(Internal.ControlBase parent)
+		public static new RadioButton Create(Internal.ControlBase parent)
 		{
 			return new RadioButton(new Gwen.Control.RadioButton(parent.Target));
 		}
 
 		[MoonSharpHidden]
-		public static RadioButton Create(Gwen.Control.ControlBase control)
+		public static new RadioButton Create(Gwen.Control.ControlBase control)
 		{
 			if (control == null)
 				return null;

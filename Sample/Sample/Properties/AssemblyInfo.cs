@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sample")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("GwenNetLua.Sample")]
+[assembly: AssemblyDescription("Samples for GwenNetLua")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Sample")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyProduct("GwenNetLua.Sample")]
+[assembly: AssemblyCopyright("Copyright © 2016 Kimmo Palosaari")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]

@@ -153,6 +153,9 @@ namespace GwenNetLua
 			UserData.RegisterProxyType<GwenNetLua.Control.HorizontalSplitter, Gwen.Control.HorizontalSplitter>(r => new GwenNetLua.Control.HorizontalSplitter(r));
 			gwen["HorizontalSplitter"] = typeof(GwenNetLua.Control.HorizontalSplitter);
 
+			UserData.RegisterProxyType<GwenNetLua.Control.HSVColorPicker, Gwen.Control.HSVColorPicker>(r => new GwenNetLua.Control.HSVColorPicker(r));
+			gwen["HSVColorPicker"] = typeof(GwenNetLua.Control.HSVColorPicker);
+
 			UserData.RegisterProxyType<GwenNetLua.Control.ImagePanel, Gwen.Control.ImagePanel>(r => new GwenNetLua.Control.ImagePanel(r));
 			gwen["ImagePanel"] = typeof(GwenNetLua.Control.ImagePanel);
 
