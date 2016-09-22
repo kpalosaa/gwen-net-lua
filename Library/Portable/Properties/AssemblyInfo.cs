@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("GwenNetLua")]
-[assembly: AssemblyDescription("Moonsharp proxy classes for Gwen.Net Ex")]
+[assembly: AssemblyDescription("MoonSharp proxy classes for Gwen.Net Ex")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("GwenNetLua")]
