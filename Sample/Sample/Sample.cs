@@ -13,7 +13,8 @@ namespace GwenNetLua.Sample
 		{
 			script = new Script(CoreModules.Preset_SoftSandbox);
 
-			GwenNetLua.Lua.Init(script, canvas);
+			GwenNetLua.Lua.Init(script);
+			GwenNetLua.Lua.SetCanvas(canvas);
 		}
 
 		public void Run()
