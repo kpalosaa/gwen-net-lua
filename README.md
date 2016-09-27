@@ -40,7 +40,9 @@ canvas.BackgroundColor = new Gwen.Color(255, 150, 170, 170);
 // Create MoonSharp script instance
 var script = new Script(CoreModules.Preset_SoftSandbox);
 // Initialize script instance with Gwen.Net Lua proxy classes and other needed stuff
-GwenNetLua.Lua.Init(script, canvas);
+GwenNetLua.Lua.Init(script);
+// Set canvas
+GwenNetLua.Lua.SetCanvas(canvas);
 // Lua script
 string lua = @"
 	button = Gwen.Button.Create(Gwen.Canvas)
