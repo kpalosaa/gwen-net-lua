@@ -121,8 +121,8 @@
     <Reference Include="Gwen">
       <HintPath>..\..\Lib\Gwen.dll</HintPath>
     </Reference>
-    <Reference Include="MoonSharp.Interpreter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=921e73ce94aa17f8, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MoonSharp.1.6.0.0\lib\portable-net4+sl5+wp8+win8\MoonSharp.Interpreter.dll</HintPath>
+    <Reference Include="MoonSharp.Interpreter, Version=1.8.0.0, Culture=neutral, PublicKeyToken=921e73ce94aa17f8, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MoonSharp.1.8.0.0\lib\portable-net4+sl5+wp8+win8\MoonSharp.Interpreter.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

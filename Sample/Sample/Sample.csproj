@@ -41,8 +41,8 @@
     <Reference Include="Gwen">
       <HintPath>..\..\Lib\Gwen.dll</HintPath>
     </Reference>
-    <Reference Include="MoonSharp.Interpreter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=921e73ce94aa17f8, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MoonSharp.1.6.0.0\lib\portable-net4+sl5+wp8+win8\MoonSharp.Interpreter.dll</HintPath>
+    <Reference Include="MoonSharp.Interpreter, Version=1.8.0.0, Culture=neutral, PublicKeyToken=921e73ce94aa17f8, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MoonSharp.1.8.0.0\lib\portable-net4+sl5+wp8+win8\MoonSharp.Interpreter.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -77,7 +77,6 @@
     <EmbeddedResource Include="Lua\Items\ImagePanel.lua" />
     <EmbeddedResource Include="Lua\Items\StatusBar.lua" />
     <EmbeddedResource Include="Lua\Items\ColorPicker.lua" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Library\Portable\GwenNetLua.csproj">
@@ -96,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Lua\Items\ComboBox.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
