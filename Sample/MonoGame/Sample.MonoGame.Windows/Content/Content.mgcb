@@ -1,0 +1,305 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:Windows
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:..\..\LuaContentPipeline\bin\Debug\LuaContentPipeline.dll
+/reference:..\..\..\..\Lib\Gwen.MonoGame.XmlContentPipeline.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Lua/Items/AnchorLayout.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/AnchorLayout.lua
+
+#begin Lua/Items/Button.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/Button.lua
+
+#begin Lua/Items/CheckBox.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/CheckBox.lua
+
+#begin Lua/Items/CollapsibleList.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/CollapsibleList.lua
+
+#begin Lua/Items/ColorPicker.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/ColorPicker.lua
+
+#begin Lua/Items/ComboBox.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/ComboBox.lua
+
+#begin Lua/Items/Docking.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/Docking.lua
+
+#begin Lua/Items/FlowLayout.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/FlowLayout.lua
+
+#begin Lua/Items/GridLayout.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/GridLayout.lua
+
+#begin Lua/Items/GroupBox.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/GroupBox.lua
+
+#begin Lua/Items/ImagePanel.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/ImagePanel.lua
+
+#begin Lua/Items/Label.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/Label.lua
+
+#begin Lua/Items/LinkLabel.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/LinkLabel.lua
+
+#begin Lua/Items/ListBox.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/ListBox.lua
+
+#begin Lua/Items/Menu.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/Menu.lua
+
+#begin Lua/Items/NumericUpDown.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/NumericUpDown.lua
+
+#begin Lua/Items/ProgressBar.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/ProgressBar.lua
+
+#begin Lua/Items/RadioButton.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/RadioButton.lua
+
+#begin Lua/Items/RichLabel.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/RichLabel.lua
+
+#begin Lua/Items/ScrollControl.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/ScrollControl.lua
+
+#begin Lua/Items/Slider.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/Slider.lua
+
+#begin Lua/Items/Splitter.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/Splitter.lua
+
+#begin Lua/Items/StatusBar.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/StatusBar.lua
+
+#begin Lua/Items/TabControl.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/TabControl.lua
+
+#begin Lua/Items/TextBox.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/TextBox.lua
+
+#begin Lua/Items/ToolWindow.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/ToolWindow.lua
+
+#begin Lua/Items/TreeControl.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/TreeControl.lua
+
+#begin Lua/Items/Window.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/Window.lua
+
+#begin Lua/Items/XmlComponent.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/XmlComponent.lua
+
+#begin Lua/Items/XmlWindow.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Items/XmlWindow.lua
+
+#begin Lua/Sample.lua
+/importer:LuaImporter
+/processor:LuaProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Lua/Sample.lua
+
+#begin Skins/DefaultSkin.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Skins/DefaultSkin.png
+
+#begin Skins/Transparent.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Skins/Transparent.png
+
+#begin Arial 11.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Arial 11.spritefont
+
+#begin Arial 16.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Arial 16.spritefont
+
+#begin Comic Sans MS 25.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Comic Sans MS 25.spritefont
+
+#begin Courier New 10.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Courier New 10.spritefont
+
+#begin Courier New 11.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Courier New 11.spritefont
+
+#begin French Script MT 35.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:French Script MT 35.spritefont
+
+#begin GwenEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:GwenEffect.fx
+
+#begin Times New Roman 33.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Times New Roman 33.spritefont
+
+#begin gwen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:gwen.png
+
+#begin test16.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:test16.png
+
+#begin Window.xml
+/importer:GwenXmlImporter
+/processor:GwenXmlProcessor
+/processorParam:Key=112233445566778899aabbccddeeff
+/build:Window.xml
+
